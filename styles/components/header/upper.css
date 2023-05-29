@@ -1,0 +1,20 @@
+/* UPPER NAV STYLES */
+.upper-nav {
+    height: 60px;
+    position: relative;
+    background: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    z-index: 1;
+  }
+  .upper-nav figure {
+    position: absolute;
+    font-size: var(--big-font-size);
+  }
+  .upper-nav__nav {
+    font-size: var(--middle-font-size);
+    float: right;
+    margin-right: 40px;
+  }
+  .upper-nav__nav img {
+    margin:0;
+  }

@@ -1,0 +1,28 @@
+.user-notes {
+    grid-area: user-notes;
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem 1rem 2rem;
+    max-height: 200px;
+  }
+  .user-notes__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .user-notes textarea {
+    border: 1px solid #d3d8de;
+    outline: none;
+    resize: none;
+    width: 98%;
+    height: 100px;
+    margin: 5px 0;
+  }
+  .user-notes button {
+    background: #5095ec;
+    color: white;
+    outline: none;
+    border: none;
+    height: 32px;
+    width: 100%;
+  }

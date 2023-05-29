@@ -1,0 +1,16 @@
+/* BOTTOM NAV STYLES */
+.bottom-nav {
+  height: 40px;
+  background: var(--additional-color);
+  box-shadow: var(--box-shadow);
+  font-size: var(--middle-font-size);
+}
+.bottom-nav nav:first-child {
+  margin-left: 40px;
+  float: left;
+}
+
+.bottom-nav nav:last-child  {
+  float: right;
+  margin-right: 40px;
+}

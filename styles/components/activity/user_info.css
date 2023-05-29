@@ -1,0 +1,28 @@
+.user-info {
+  grid-area: user-info;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+  padding: 1rem 2rem 1rem 2rem;
+}
+aside h4,aside h5 {
+  margin:0;
+  font-weight: normal;
+}
+.user-info__name {
+  font-size: var(--big-font-size);
+  color: var(--text-color);
+}
+.user-info__details {
+  font-size:var(--middle-font-size);
+  color: var(--secondary-text-color);
+}
+.user-info__avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
