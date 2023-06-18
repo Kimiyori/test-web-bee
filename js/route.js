@@ -31,7 +31,7 @@ const route = (event) => {
   });
   const location = window.location.pathname;
   const sideBarButton = document.querySelector("#sidebar-menu")
-  sideBarButton.hidden = location === "test-web-bee/" || location === "test-web-bee/activity" ? false : true;
+  sideBarButton.hidden = location === "/test-web-bee/" || location === "/test-web-bee/activity" ? false : true;
 };
 
 const loadScript = async (src) => {
@@ -48,7 +48,7 @@ const locationHandler = async () => {
   // get the route object from the urlRoutes object
   const route = routes[location];
   // get the html from the template
-  const html = await fetch(REPO_NAME + route.template)
+  const html = await fetch( route.template)
     .then((response) => response.text())
     .catch((e) => console.log("Connection error", e));
   // set the content of the content div to the html
