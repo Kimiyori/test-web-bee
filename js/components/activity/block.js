@@ -5,10 +5,14 @@ function escapeSpecialChars(jsonString) {
 const fullBlock = (data) => {
   return `
     <article class="bg-white p-4 mb-4">
-      ${data?.content?.image ? `<img class='w-100 object-fit-cover mb-4' style="max-height:650px" src=${data.content.image} />` : ""}
       ${
-       data?.content?.author && data?.content?.quote
-         ? `<div class="d-flex align-items-center mb-4">
+        data?.content?.image
+          ? `<img class='w-100 object-fit-cover mb-4' style="max-height:650px" src=${data.content.image} />`
+          : ""
+      }
+      ${
+        data?.content?.author && data?.content?.quote
+          ? `<div class="d-flex align-items-center mb-4">
               <img src="../assets/icons/Comments.svg" width="25px" height="25px" alt="Comments icon" />
                 <span>
                   <font color="#5095EC">${data.content.author.firstName} ${data.content.author.lastName}</font> commented:
@@ -16,7 +20,7 @@ const fullBlock = (data) => {
             </div>
             <figure>
               <blockquote class="blockquote">
-                <p  class="fs-6 mb-4">
+                <p  class="fs-6 mb-4 " >
                   ${data.content.quote}
                 </p>
                 <footer class="blockquote-footer">
@@ -24,7 +28,7 @@ const fullBlock = (data) => {
                 </footer>
               </blockquote>
             </figure>`
-         : ""
+          : ""
       }
       <div class="d-flex">
         <div class="me-4">
@@ -41,8 +45,8 @@ const fullBlock = (data) => {
 };
 const shortBlock = (data) => {
   return `
-    <article class="bg-white d-flex align-items-center justify-content-between mb-4  p-4" >
-      <h4 class="fw-normal">${data.content.title}</h4>
+    <article class="bg-white flex-column flex-lg-row d-flex align-items-center justify-content-between mb-4  p-4" >
+      <h4 class="fw-normal fs-3">${data.content.title}</h4>
       <div class="inline_center">
         <img src="../assets/icons/Time.svg" width="20px" height="20px" alt="Time icon" /> 
         <span class="ms-2">${data.content.timestamp} minutes ago</span>

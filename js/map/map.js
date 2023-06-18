@@ -1,4 +1,4 @@
-const locationData = {
+var locationData = {
   coordinates: [39.711196, 47.226039],
   title: "You here",
   color: "#3b5998",
