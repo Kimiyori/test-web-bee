@@ -31,7 +31,7 @@ const route = (event) => {
   });
   const location = window.location.pathname;
   const sideBarButton = document.querySelector("#sidebar-menu")
-  sideBarButton.hidden = location === "/" || location === "/activity" ? false : true;
+  sideBarButton.hidden = location === "test-web-bee/" || location === "test-web-bee/activity" ? false : true;
 };
 
 const loadScript = async (src) => {
