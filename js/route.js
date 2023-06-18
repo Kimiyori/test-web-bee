@@ -42,13 +42,13 @@ const loadScript = async (src) => {
 };
 
 const locationHandler = async () => {
-  // const REPO_NAME = "/test-web-bee";
-  // const location = window.location.pathname.replace(REPO_NAME, ""); // get the url path
-  const location = window.location.pathname;
+  const REPO_NAME = "/test-web-bee";
+  const location = window.location.pathname.replace(REPO_NAME, ""); // get the url path
+  // const location = window.location.pathname;
   // get the route object from the urlRoutes object
   const route = routes[location];
   // get the html from the template
-  const html = await fetch(route.template)
+  const html = await fetch(REPO_NAME + route.template)
     .then((response) => response.text())
     .catch((e) => console.log("Connection error", e));
   // set the content of the content div to the html
