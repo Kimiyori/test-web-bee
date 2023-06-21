@@ -1,7 +1,9 @@
 import MapComponent from "../components/shared/Entity/MapComponent";
 import { ElementWrapper } from "../components/shared/UI/ElementWrapper";
+import { usePageTitle } from "../hooks/title";
 
 const Map = () => {
+  usePageTitle("Map");
   return (
     <>
       <ElementWrapper name="Yandex Map">

@@ -1,7 +1,9 @@
 import { TimerContext } from "../features/timerContext";
 import { useContext } from "react";
 import { ElementWrapper } from "../components/shared/UI/ElementWrapper";
+import { usePageTitle } from "../hooks/title";
 const Time = () => {
+  usePageTitle("Time");
   const { totalTime } = useContext(TimerContext);
   return (
     <>

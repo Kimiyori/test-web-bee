@@ -2,8 +2,10 @@ import { DATA_FULL, DATA_SHORT } from "../MockData";
 import FullBlock from "../components/core/BlockData/FullBlock";
 import ShortBlock from "../components/core/BlockData/ShortBlock";
 import SideBar from "../components/core/SideBar/SideBarBody";
+import { usePageTitle } from "../hooks/title";
 
 const ActivityPage = () => {
+  usePageTitle('Activity')
   const FullPosts = DATA_FULL.map((item, index) => (
     <FullBlock image={item.image} author={item.author} quote={item.quote} key={index} />
   ));
