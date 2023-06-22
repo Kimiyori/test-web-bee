@@ -48,7 +48,7 @@ const locationHandler = async () => {
   // get the route object from the urlRoutes object
   const route = routes[location];
   // get the html from the template
-  const html = await fetch(REPO_NAME+ route.template)
+  const html = await fetch(REPO_NAME + route.template)
     .then((response) => response.text())
     .catch((e) => console.log("Connection error", e));
   // set the content of the content div to the html

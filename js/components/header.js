@@ -74,11 +74,22 @@ class Header extends HTMLElement {
               </li>
               <li class="nav-item active-buttons p-1">
                 <img src="assets/icons/Map.svg" width="15px" height="15px" alt="Map icon" />
-                <a href="/test-web-bee/map"  ddata-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" onclick="route()"  class="align-middle text-decoration-none text-black ms-2 fw-light">Map</a>
+                <a href="/test-web-bee/map" 
+                data-bs-toggle="collapse"  
+                role="button" aria-expanded="false" 
+                aria-controls="collapseExample" 
+                onclick="route()"  
+                class="align-middle text-decoration-none text-black ms-2 fw-light">Map</a>
               </li>
               <li class="nav-item active-buttons p-1">
                 <img src="assets/icons/Time.svg" width="15px" height="15px" alt="Time icon" />
-                <a href="/test-web-bee/time"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" onclick="route()"  class="align-middle text-decoration-none text-black ms-2 fw-light">Time</a>
+                <a href="/test-web-bee/time"  
+                data-bs-toggle="collapse" 
+                role="button" 
+                aria-expanded="false" 
+                aria-controls="collapseExample" 
+                onclick="route()"  
+                class="align-middle text-decoration-none text-black ms-2 fw-light">Time</a>
               </li>
             </ul>
             <hr class="hr" />
