@@ -77,31 +77,3 @@ class Header extends HTMLElement {
 }
 
 customElements.define("main-header", Header);
-{/* <section class="p-1 bg-light shadow-sm position-relative">
-<figure class="fs-5 position-absolute">
-  <img src="../assets/icons/Back.svg" width="15px" height="15px" alt="..." />
-  <span>User pages - Profile</span>
-</figure>
-<nav class="fs-4 float-end h-100 mr-3 d-flex align-items-center">
-  <ul class="fs-6 h-100 list-style-type-none d-flex gap-1 p-0 list-unstyled">
-    <li class="text-center d-flex align-items-center p-1">
-      <a role="button" href="#" class="text-decoration-none text-black">
-        <img class="me-2" src="../assets/icons/Statistics.svg" width="20px" height="20px" alt="Stat icon" />
-        <p>Statistics</p>
-      </a>
-    </li>
-    <li class="text-center d-flex align-items-center p-1">
-      <a role="button" href="#" class="text-decoration-none text-black">
-        <img class="me-2" src="../assets/icons/Invoices.svg" width="20px" height="20px" alt="Invoices icon" />
-        <p>Invoices</p>
-      </a>
-    </li>
-    <li class="text-center d-flex align-items-center p-1">
-      <a role="button" href="#" class="text-decoration-none text-black">
-        <img class="me-2" src="../assets/icons/Schedule.svg" width="20px" height="20px" alt=".Schedule icon" />
-        <p>Schedule</p>
-      </a>
-    </li>
-  </ul>
-</nav>
-</section> */}
