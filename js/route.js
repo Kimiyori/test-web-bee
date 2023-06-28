@@ -22,7 +22,7 @@ const REPO_NAME = "/test-web-bee";
 
 const isNotLocalhost = window.location.origin.includes("kimiyori.github.io");
 
-const replaceUrl = (event) => {
+const getTarget = (event) => {
   const isAnchor = event.target.tagName.toLowerCase() === "a";
   const target = isAnchor ? event.target : event.target.closest("a");
   return target;
@@ -64,9 +64,9 @@ const locationHandler = async () => {
 
 const route = (event) => {
   event.preventDefault();
-  const target = replaceUrl(event);
-  locationHandler();
+  const target = getTarget(event);
   window.history.pushState({}, "", isNotLocalhost ? REPO_NAME + target.pathname : target.pathname);
+  locationHandler();
   highlightActiveButton();
   hideSideBarButton();
 };
