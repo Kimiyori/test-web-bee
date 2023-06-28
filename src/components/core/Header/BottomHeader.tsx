@@ -5,14 +5,54 @@ import Notes from "../../../assets/icons/Notes.svg";
 import Friends from "../../../assets/icons/Friends.svg";
 import Photo from "../../../assets/icons/Photo.svg";
 import Settings from "../../../assets/icons/Settings.svg";
-import Dropdown from "../../../assets/icons/Dropdown.svg";
 import { HeaderBottomLink } from "./BottomLink";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const LeftMenu = () => {
+  const SettingsElement = () => (
+    <>
+      <div
+        className="dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <HeaderBottomLink
+          img={{ image: Settings, altName: "Settings" }}
+          name={"Settings"}
+        />
+        &nbsp;
+      </div>
+      <ul className="dropdown-menu position-absolute dropdown-menu-lg-end">
+        <li>
+          <Link
+            to={"/"}
+            className=" dropdown-item align-middle text-decoration-none text-black fw-light"
+          >
+            Test Settings 1
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={"/"}
+            className=" dropdown-item align-middle text-decoration-none text-black fw-light"
+          >
+            Test Settings 2
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={"/"}
+            className=" dropdown-item align-middle text-decoration-none text-black fw-light"
+          >
+            Test Settings 3
+          </Link>
+        </li>
+      </ul>
+    </>
+  );
   return (
-    <ul className=" navbar-nav justify-content-end  gap-3  me-5">
+    <ul className="navbar-nav justify-content-end  gap-3  me-5">
       <li className="nav-item    p-1">
         <HeaderBottomLink
           img={{ image: Notes, altName: "Notes" }}
@@ -31,13 +71,8 @@ const LeftMenu = () => {
           name={"Photo"}
         />
       </li>
-      <li className="nav-item  p-1 ">
-        <HeaderBottomLink
-          img={{ image: Settings, altName: "Settings" }}
-          name={"Settings"}
-        />
-        &nbsp;
-        <img src={Dropdown} alt="Dropdown button" />
+      <li className="nav-item  p-1 dropdown">
+        <SettingsElement />
       </li>
     </ul>
   );
