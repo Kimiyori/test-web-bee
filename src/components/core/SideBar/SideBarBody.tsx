@@ -6,7 +6,7 @@ const SideBar = () => {
   return (
     <>
       <div
-        className="col-2 offcanvas-lg offcanvas-end"
+        className="col-2 offcanvas-lg offcanvas-end bg-light"
         id="offcanvasResponsive"
         aria-labelledby="offcanvasResponsiveLabel"
         style={{ minWidth: "300px" }}

@@ -36,8 +36,7 @@ const LeftMenu = () => {
           img={{ image: Settings, altName: "Settings" }}
           name={"Settings"}
         />
-      </li>
-      <li className="nav-item  p-1">
+        &nbsp;
         <img src={Dropdown} alt="Dropdown button" />
       </li>
     </ul>
