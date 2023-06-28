@@ -40,7 +40,7 @@ class Header extends HTMLElement {
           <li class="nav-item  p-1 active-buttons d-inline-flex align-items-center">
           <a href="/pages/activity.html" onclick="onClick(event)" class=" text-decoration-none text-black ms-2 fw-light ">
               <img src="../assets/icons/Activity.svg"  alt="Activity icon" />
-             <span> Activity</span>
+             Activity
               </a>
           </li>
           <li class="nav-item  p-1 active-buttons d-inline-flex align-items-center">
