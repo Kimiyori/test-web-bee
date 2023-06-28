@@ -25,8 +25,7 @@ const isNotLocalhost = window.location.origin.includes("kimiyori.github.io");
 const replaceUrl = (event) => {
   const isAnchor = event.target.tagName.toLowerCase() === "a";
   const target = isAnchor ? event.target : event.target.closest("a");
-  target.pathname = isNotLocalhost ? REPO_NAME + target.pathname : target.pathname;
-  window.history.pushState({}, "", target.href);
+  return target;
 };
 const highlightActiveButton = () => {
   const buttons = document.querySelectorAll(".active-buttons");
@@ -65,8 +64,9 @@ const locationHandler = async () => {
 
 const route = (event) => {
   event.preventDefault();
-  replaceUrl(event);
+  const target = replaceUrl(event);
   locationHandler();
+  window.history.pushState({}, "", isNotLocalhost ? REPO_NAME + target.pathname : target.pathname);
   highlightActiveButton();
   hideSideBarButton();
 };
