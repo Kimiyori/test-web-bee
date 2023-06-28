@@ -1,5 +1,4 @@
 const onClick = (event) => {
-  event.preventDefault();
   if (window.location.origin.includes("kimiyori.github.io")) {
     if (event.target.tagName.toLowerCase() === "a") {
       event.target.pathname = "/test-web-bee" + event.target.pathname;
