@@ -48,9 +48,12 @@ const loadScript = async (src) => {
   document.body.append(script);
 };
 
-const locationHandler = async () => {
+const locationHandler = async (event) => {
+  const target = event && getTarget(event);
+  target && window.history.pushState({}, "", isNotLocalhost ? REPO_NAME + target.pathname : target.pathname);
   const location = isNotLocalhost ? window.location.pathname.replace(REPO_NAME, "") : window.location.pathname;
   const route = routes[location];
+
   try {
     const html = await fetch(isNotLocalhost ? REPO_NAME + route.template : route.template);
     const text = await html.text();
@@ -64,9 +67,7 @@ const locationHandler = async () => {
 
 const route = (event) => {
   event.preventDefault();
-  const target = getTarget(event);
-  window.history.pushState({}, "", isNotLocalhost ? REPO_NAME + target.pathname : target.pathname);
-  locationHandler();
+  locationHandler(event);
   highlightActiveButton();
   hideSideBarButton();
 };
