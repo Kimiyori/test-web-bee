@@ -1,17 +1,15 @@
-const start = new Date().getTime();
+let time = 0;
+const formattingTime = (time) => {
+  return time.toString().padStart(2, "0");
+};
 function myTimer() {
-    const end = new Date().getTime();
-    const totalTime = (end - start) / 1000;
-    const hours = Math.floor(totalTime / 60 / 60)
-        .toString()
-        .padStart(2, "0");
-    const minutes = Math.floor((totalTime / 60) % 60)
-        .toString()
-        .padStart(2, "0");
-    const seconds = Math.floor(totalTime % 60).toString().padStart(2, "0");
-    const timerTag = document.getElementById("timer");
-    if (timerTag) {
-        timerTag.textContent = `${hours}:${minutes}:${seconds}`
-    }
+  time++;
+  const hours = formattingTime(Math.floor(time / 60 / 60));
+  const minutes = formattingTime(Math.floor((time / 60) % 60));
+  const seconds = formattingTime(Math.floor(time % 60));
+  const timerTag = document.getElementById("timer");
+  if (timerTag) {
+    timerTag.textContent = `${hours}:${minutes}:${seconds}`;
+  }
 }
 setInterval(myTimer, 1000);
