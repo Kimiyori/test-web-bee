@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ActivityPage from "./pages/activity.page";
 import Map from "./pages/map.page";
