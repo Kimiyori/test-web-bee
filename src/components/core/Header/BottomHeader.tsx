@@ -21,7 +21,6 @@ const LeftMenu = () => {
           img={{ image: Settings, altName: "Settings" }}
           name={"Settings"}
         />
-        &nbsp;
       </div>
       <ul className="dropdown-menu position-absolute dropdown-menu-lg-end">
         <li>
@@ -52,7 +51,7 @@ const LeftMenu = () => {
     </>
   );
   return (
-    <ul className="navbar-nav justify-content-end  gap-3  me-5">
+    <ul className="navbar-nav justify-content-end  gap-1  me-5">
       <li className="nav-item    p-1">
         <HeaderBottomLink
           img={{ image: Notes, altName: "Notes" }}
@@ -80,7 +79,7 @@ const LeftMenu = () => {
 
 const RightMenu = ({ activeButton }: { activeButton: string }) => {
   return (
-    <ul className="navbar-nav  justify-content-start  gap-3 me-auto ">
+    <ul className="navbar-nav  justify-content-start  gap-1 me-auto ">
       <li
         className={
           "nav-item p-1" +
@@ -128,7 +127,7 @@ export const BottomHeader = () => {
   }, [location]);
   return (
     <>
-      <section className="navbar navbar-expand-lg bg-white shadow-sm fs-6 pt-lg-0 pb-lg-0">
+      <section className="navbar navbar-expand-lg bg-white shadow-sm fs-6 py-lg-0">
         {activeButton === "/" && (
           <button
             className="btn d-lg-none bg-body-secondary bg-opacity-50 ms-5"

@@ -11,7 +11,7 @@ const FullBlock = ({ image, author, quote }: FullBlockData) => {
       <article className="bg-white p-4 mb-4">
         <img className="w-100 object-fit-cover mb-4" style={{ maxHeight: "650px" }} src={image} alt="Post" />
         <div className="d-flex align-items-center mb-4">
-          <img src={Comments} width="25px" height="25px" alt="Comments icon" />
+          <img src={Comments} alt="Comments icon" />
           &nbsp;
           <span style={{ color: "#5095EC" }}>
             {author.firstName} {author.lastName}
@@ -27,12 +27,12 @@ const FullBlock = ({ image, author, quote }: FullBlockData) => {
         </figure>
         <div className="d-flex">
           <div className="me-4">
-            <img src={Views} width="20px" height="20px" alt="Views icon" />
+            <img src={Views}  alt="Views icon" />
             &nbsp;
             <span>432</span>
           </div>
           <div>
-            <img src={Comments} width="20px" height="20px" alt="Comm icon" />
+            <img src={Comments}  alt="Comm icon" />
             &nbsp;
             <span>47</span>
           </div>

@@ -1,9 +1,9 @@
 import MyProfile from "../../../assets/icons/MyProfile.svg";
 import Balance from "../../../assets/icons/Balance.svg";
 import Connections from "../../../assets/icons/Connections.svg";
-import Friends from "../../../assets/icons/Friends.svg";
+import Friends from "../../../assets/icons/FriendsNavigation.svg";
 import Events from "../../../assets/icons/Events.svg";
-import Settings from "../../../assets/icons/Settings.svg";
+import Settings from "../../../assets/icons/SettingsNavigation.svg";
 import NavElement from "./NavElement";
 import { SideBarDropdownMenu } from "./SideBarDropdownMenu";
 export const SideBarNavigation = () => {

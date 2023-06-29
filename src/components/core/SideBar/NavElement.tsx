@@ -13,9 +13,8 @@ const NavElement = ({ title, image, alt = "..." }: NavElementData) => {
           to={"/"}
           className="align-middle text-decoration-none text-black fw-light"
         >
-          <img src={image} width="20x" height="20x" alt={alt} />
-          &nbsp;
-          <span>{title}</span>
+          <img src={image} alt={alt} />
+          <span className="ms-1">{title}</span>
         </Link>
       </li>
     </>
