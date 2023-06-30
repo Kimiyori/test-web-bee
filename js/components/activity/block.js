@@ -9,7 +9,7 @@ const fullBlock = (data) => {
       ${
        data?.content?.author && data?.content?.quote
          ? `<div class="d-flex align-items-center mb-4">
-              <img src="../assets/icons/Comments.svg"  alt="Comments icon" />
+              <img src="assets/icons/Comments.svg"  alt="Comments icon" />
                 <span>
                   <font color="#5095EC">${data.content.author.firstName} ${data.content.author.lastName}</font> commented:
                 </span>
@@ -28,11 +28,11 @@ const fullBlock = (data) => {
       }
       <div class="d-flex">
         <div class="me-4">
-          <img src="../assets/icons/Views.svg" alt="Views icon" />
+          <img src="assets/icons/Views.svg" alt="Views icon" />
           <span>432</span>
         </div>
         <div >
-          <img src="../assets/icons/Comments.svg"  alt="Comm icon" />
+          <img src="assets/icons/Comments.svg"  alt="Comm icon" />
           <span>47</span>
         </div>
       </div>
@@ -44,9 +44,9 @@ const shortBlock = (data) => {
     <article class="bg-white d-flex align-items-center justify-content-between mb-4  p-4" >
       <h4 class="fw-normal">${data.content.title}</h4>
       <div class="inline_center">
-        <img src="../assets/icons/TimeBlog.svg" alt="Time icon" /> 
+        <img src="assets/icons/TimeBlog.svg" alt="Time icon" /> 
         <span class="ms-2">${data.content.timestamp} minutes ago</span>
-        <img class="ms-2" src="../assets/icons/Dropdown.svg"  alt="Dropdown icon" />
+        <img class="ms-2" src="assets/icons/Dropdown.svg"  alt="Dropdown icon" />
       </div>
     </article>
     `;
