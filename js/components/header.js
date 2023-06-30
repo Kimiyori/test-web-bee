@@ -40,7 +40,7 @@ class Header extends HTMLElement {
       <ul class="col  ms-5 nav gap-1" id="navigation">
         <li class="nav-item active-buttons h-100 d-flex align-items-center">
           <a
-            href="/index.html"
+            href="/"
             onclick="route(event)"
             class="container text-decoration-none text-black fw-light"
           >
