@@ -10,7 +10,7 @@ class Header extends HTMLElement {
   render() {
     this.innerHTML = `   
   <header>
-    <section class="z-1 p-1 bg-light shadow-sm position-relative">
+    <section class="z-1 p-1 bg-light shadow-sm position-relative" style="height:64px">
       <figure class="fs-5 position-absolute top-50 start-0 translate-middle-y ms-5">
         <img src="../assets/icons/Back.svg" alt="..." />
         <span class="ms-2 fw-light">User pages - Profile</span>
@@ -36,9 +36,9 @@ class Header extends HTMLElement {
         </li>
       </ul>
     </section>
-    <section class="row justify-content-evenly bg-white shadow-sm fs-6">
-      <ul class="col justify-content-start ms-5 nav gap-1" id="navigation">
-        <li class="nav-item p-1 active-buttons">
+    <section class="row justify-content-evenly bg-white shadow-sm fs-6" style="height:40px">
+      <ul class="col  ms-5 nav gap-1" id="navigation">
+        <li class="nav-item active-buttons h-100 d-flex align-items-center">
           <a
             href="/pages/activity.html"
             onclick="route(event)"
@@ -48,13 +48,13 @@ class Header extends HTMLElement {
             <span class="align-middle">Activity</span>
           </a>
         </li>
-        <li class="nav-item p-1 active-buttons">
+        <li class="nav-item active-buttons h-100 d-flex align-items-center">
           <a href="/pages/map.html" onclick="route(event)" class="container text-decoration-none text-black fw-light">
             <img src="../assets/icons/Map.svg" alt="Map icon" />
             <span class="align-middle">Map</span>
           </a>
         </li>
-        <li class="nav-item p-1 active-buttons">
+        <li class="nav-item active-buttons h-100 d-flex align-items-center">
           <a
             href="/pages/time.html"
             onclick="route(event)"
