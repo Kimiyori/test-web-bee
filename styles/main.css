@@ -1,0 +1,17 @@
+#user-avatar {
+  max-width: 200px;
+  max-height: 200px;
+}
+#upper-header {
+  height: 64px;
+}
+#bottom-header {
+  height: 40px;
+}
+
+#map {
+ height: 700px;
+}
+article > img {
+  max-height: 650px;
+}

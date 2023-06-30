@@ -10,7 +10,7 @@ class Header extends HTMLElement {
   render() {
     this.innerHTML = `   
   <header>
-    <section class="z-1 p-1 bg-light shadow-sm position-relative" style="height:64px">
+    <section class="z-1 p-1 bg-light shadow-sm position-relative" id="upper-header">
       <figure class="fs-5 position-absolute top-50 start-0 translate-middle-y ms-5">
         <img src="assets/icons/Back.svg" alt="..." />
         <span class="ms-2 fw-light">User pages - Profile</span>
@@ -36,7 +36,7 @@ class Header extends HTMLElement {
         </li>
       </ul>
     </section>
-    <section class="row bg-white shadow-sm" style="height:40px">
+    <section class="row bg-white shadow-sm" id="bottom-header">
       <ul class="col  ms-5 nav gap-1"  aria-label="main">
         <li class="nav-item h-100 d-flex align-items-center">
           <a

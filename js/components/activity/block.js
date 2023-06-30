@@ -7,7 +7,7 @@ const fullBlock = (data) => {
     <article class="bg-white p-4">
       ${
         data.content.image &&
-        `<img class='w-100 object-fit-cover mb-4' style="max-height:650px" src=${data.content.image} alt="Post Image" />`
+        `<img class='w-100 object-fit-cover mb-4' src=${data.content.image} alt="Post Image" />`
       }
       ${
         data.content.author &&
