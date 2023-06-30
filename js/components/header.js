@@ -40,7 +40,7 @@ class Header extends HTMLElement {
       <ul class="col  ms-5 nav gap-1" id="navigation">
         <li class="nav-item active-buttons h-100 d-flex align-items-center">
           <a
-            href="/pages/activity.html"
+            href="/index.html"
             onclick="route(event)"
             class="container text-decoration-none text-black fw-light"
           >
@@ -49,14 +49,14 @@ class Header extends HTMLElement {
           </a>
         </li>
         <li class="nav-item active-buttons h-100 d-flex align-items-center">
-          <a href="/pages/map.html" onclick="route(event)" class="container text-decoration-none text-black fw-light">
+          <a href="/map.html" onclick="route(event)" class="container text-decoration-none text-black fw-light">
             <img src="../assets/icons/Map.svg" alt="Map icon" />
             <span class="align-middle">Map</span>
           </a>
         </li>
         <li class="nav-item active-buttons h-100 d-flex align-items-center">
           <a
-            href="/pages/time.html"
+            href="/time.html"
             onclick="route(event)"
             class="container text-decoration-none text-black fw-light"
           >

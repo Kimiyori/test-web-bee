@@ -1,4 +1,4 @@
-const ROUTES = ["activity", "map", "time"];
+const ROUTES = ["index", "map", "time"];
 
 const route = (event) => {
   const isNotLocalhost = window.location.origin.includes("kimiyori.github.io");
@@ -13,5 +13,4 @@ function highlightActiveButton() {
     window.location.pathname.includes(ROUTES[i]) && childs[i].classList.add("bg-body-secondary", "bg-opacity-50");
   }
 }
-
 document.addEventListener("DOMContentLoaded", highlightActiveButton);
