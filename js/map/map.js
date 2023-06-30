@@ -4,7 +4,6 @@ const locationData = {
   color: "#3b5998",
   mapFollowsOnDrag: true,
 };
-initMap();
 async function initMap() {
   await ymaps3.ready;
   const { YMap, YMapDefaultSchemeLayer, YMapControls, YMapDefaultFeaturesLayer } = ymaps3;
@@ -22,5 +21,6 @@ async function initMap() {
 }
 
 function deleteSpinner() {
-  document.querySelector("#spinner").className = "position-absolute";
+  document.querySelector("#spinner").remove();
 }
+initMap();
