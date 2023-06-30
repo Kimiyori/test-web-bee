@@ -7,7 +7,7 @@ const route = (event) => {
 };
 
 function highlightActiveButton() {
-  const navElement = document.getElementById("navigation");
+  const navElement = document.querySelector('ul[aria-label="main"]');
   const childs = navElement.querySelectorAll("li");
   for (let i = 0; i < childs.length; i++) {
     window.location.pathname === ROUTES[i] && childs[i].classList.add("bg-body-secondary", "bg-opacity-50");
