@@ -4,7 +4,7 @@ class NavListItem extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["image", "title","alt"];
+    return ["image", "title", "alt"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -17,11 +17,13 @@ class NavListItem extends HTMLElement {
     const alt = this.attributes?.alt?.value;
     this.innerHTML = `  
     <li class="nav-item fs-6  mb-3">
-      <img src=${image}  alt=${alt} />
-      <span>${title}</span>
+      <a href="/" class="text-decoration-none text-black ">
+        <img src=${image}  alt=${alt} />
+        <span>${title}</span>
+      </a>
     </li>
       `;
   }
 }
 
-customElements.define("nav-item", NavListItem)
+customElements.define("nav-item", NavListItem);

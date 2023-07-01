@@ -12,6 +12,9 @@
 #map {
  height: 700px;
 }
-article > img {
-  max-height: 650px;
+article > div > img {
+  max-height: 200px;
+}
+article > div > h6 {
+  font-size: 80px;
 }

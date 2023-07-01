@@ -21,6 +21,6 @@ async function initMap() {
 }
 
 function deleteSpinner() {
-  document.querySelector("#spinner").remove();
+  document.querySelector("#spinner").style;
 }
 initMap();
