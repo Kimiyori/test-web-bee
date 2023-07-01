@@ -1,15 +1,17 @@
 let time = 0;
+
 const formattingTime = (time) => {
   return time.toString().padStart(2, "0");
 };
-function myTimer() {
+
+const myTimer = () => {
   time++;
   const hours = formattingTime(Math.floor(time / 60 / 60));
   const minutes = formattingTime(Math.floor((time / 60) % 60));
   const seconds = formattingTime(Math.floor(time % 60));
-  const timerTag = document.getElementById("timer");
+  const timerTag = document.querySelector("#timer");
   if (timerTag) {
     timerTag.textContent = `${hours}:${minutes}:${seconds}`;
   }
-}
+};
 setInterval(myTimer, 1000);

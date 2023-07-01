@@ -1,60 +1,22 @@
-const routes = {
-  "/": {
-    template: "/pages/activity.html",
-    title: "Activity",
-  },
-  "/activity": {
-    template: "/pages/activity.html",
-    title: "Activity",
-  },
-  "/map": {
-    template: "/pages/map.html",
-    title: "Map",
-    scripts: ["js/map/map.js"],
-  },
-  "/time": {
-    template: "/pages/time.html",
-    title: "Time",
-  },
-};
-
-const REPO_NAME = "/test-web-bee";
-
-const isNotLocalhost = window.location.origin.includes("kimiyori.github.io");
-
-const getTarget = (event) => {
-  const isAnchor = event.target.tagName.toLowerCase() === "a";
-  const target = isAnchor ? event.target : event.target.closest("a");
-  return target;
-};
-const highlightActiveButton = () => {
-  const navElement = document.querySelector('ul[aria-label="main"]');
-  const childs = navElement.querySelectorAll("li");
-  childs.forEach((el) => {
-    el.onclick = () => {
-      childs.forEach((el) => el.classList.remove("bg-body-secondary", "bg-opacity-50"));
-      el.classList.add("bg-body-secondary", "bg-opacity-50");
-    };
-  });
-};
-const hideSideBarButton = () => {
-  const location = window.location.pathname;
-  const sideBarButton = document.querySelector("#sidebar-menu");
-  sideBarButton.hidden = location.endsWith("/") || location.endsWith("activity") ? false : true;
-};
+import { isNotLocalhost, ROUTES, REPO_NAME, getTarget, scriptIsLoaded } from "./utils/routes.js";
+import { highlightActiveButton, handleSideBarButton } from "./utils/buttons.js";
 
 const loadScript = async (src) => {
-  const script = document.createElement("script");
-  script.src = src;
-  document.body.append(script);
+  return new Promise(function (resolve, reject) {
+    if (scriptIsLoaded(src)) {
+      return resolve();
+    }
+    let script = document.createElement("script");
+    script.src = src;
+    script.onload = () => resolve(script);
+    script.onerror = () => reject(new Error(`Something went wrong with ${src}`));
+
+    document.body.append(script);
+  });
 };
-
-const locationHandler = async (event) => {
-  const target = event && getTarget(event);
-  target && window.history.pushState({}, "", isNotLocalhost ? REPO_NAME + target.pathname : target.pathname);
+const locationHandler = async () => {
   const location = isNotLocalhost ? window.location.pathname.replace(REPO_NAME, "") : window.location.pathname;
-  const route = routes[location];
-
+  const route = ROUTES[location];
   try {
     const html = await fetch(isNotLocalhost ? REPO_NAME + route.template : route.template);
     const text = await html.text();
@@ -63,14 +25,17 @@ const locationHandler = async (event) => {
   } catch (e) {
     throw new Error("Something went wrong!");
   }
-  route?.scripts?.forEach((src) => loadScript(src));
+  route?.scripts?.reduce((acc, src) => acc.then(() => loadScript(src)), Promise.resolve());
+  location === "/map" && scriptIsLoaded(ROUTES[location].scripts[1]) && initMap();
 };
 
 const route = (event) => {
   event.preventDefault();
-  locationHandler(event);
+  const target = event && getTarget(event);
+  target && window.history.pushState({}, "", isNotLocalhost ? REPO_NAME + target.pathname : target.pathname);
+  locationHandler();
   highlightActiveButton();
-  hideSideBarButton();
+  handleSideBarButton();
 };
 window.onpopstate = locationHandler;
 window.route = route;

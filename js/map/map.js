@@ -1,11 +1,11 @@
-var locationData = {
+const locationData = {
   coordinates: [39.711196, 47.226039],
   title: "You here",
   color: "#3b5998",
   mapFollowsOnDrag: true,
 };
-initMap();
-async function initMap() {
+
+const initMap = async () => {
   await ymaps3.ready;
   const { YMap, YMapDefaultSchemeLayer, YMapControls, YMapDefaultFeaturesLayer } = ymaps3;
 
@@ -18,9 +18,11 @@ async function initMap() {
   map.addChild(new YMapControls({ position: "right" }).addChild(new YMapZoomControl({})));
   map.addChild(new YMapDefaultFeaturesLayer({ id: "features" }));
   map.addChild(new YMapDefaultMarker(locationData));
-  deleteSpinner();
-}
+  hideSpinner();
+};
 
-function deleteSpinner() {
-  document.querySelector("#spinner").className = "position-absolute";
-}
+const hideSpinner = () => {
+  document.querySelector("#spinner").style.display = "none";
+};
+
+initMap();

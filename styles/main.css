@@ -8,10 +8,23 @@
 #bottom-header > div > ul {
   min-height: 40px;
 }
-
 #map {
- height: 700px;
+  height: 300px;
 }
+#spinner {
+  width: 100px;
+  height: 100px;
+}
+
 article > img {
   max-height: 650px;
+}
+
+@media screen and (min-width: 992px) {
+  #map {
+    height: 700px;
+  }
+  #spinner {
+  width: 200px;
+  height: 200px;
 }
