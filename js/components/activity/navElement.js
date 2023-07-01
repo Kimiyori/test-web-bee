@@ -16,7 +16,7 @@ class NavListItem extends HTMLElement {
     const title = this.attributes?.title?.value;
     const alt = this.attributes?.alt?.value;
     this.innerHTML = `  
-    <li class="nav-item fs-6  mb-3">
+    <li class="nav-item fs-6 ">
       <img src=${image}  alt=${alt} />
       <span>${title}</span>
     </li>

@@ -28,10 +28,11 @@ const getTarget = (event) => {
   return target;
 };
 const highlightActiveButton = () => {
-  const buttons = document.querySelectorAll(".active-buttons");
-  buttons.forEach((el) => {
+  const navElement = document.querySelector('ul[aria-label="main"]');
+  const childs = navElement.querySelectorAll("li");
+  childs.forEach((el) => {
     el.onclick = () => {
-      buttons.forEach((el) => el.classList.remove("bg-body-secondary", "bg-opacity-50"));
+      childs.forEach((el) => el.classList.remove("bg-body-secondary", "bg-opacity-50"));
       el.classList.add("bg-body-secondary", "bg-opacity-50");
     };
   });
@@ -60,7 +61,7 @@ const locationHandler = async (event) => {
     document.getElementById("content").innerHTML = text;
     document.title = route.title;
   } catch (e) {
-    throw new Error(e);
+    throw new Error("Something went wrong!");
   }
   route?.scripts?.forEach((src) => loadScript(src));
 };
