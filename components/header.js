@@ -17,19 +17,19 @@ class Header extends HTMLElement {
       </figure>
       <ul class="nav  justify-content-end gap-4 me-5" aria-label="upper-nav">
         <li class="nav-item text-center">
-          <a href="/" class="align-middle text-decoration-none text-black">
+          <a href="/stat.html" class="align-middle text-decoration-none text-black">
             <img src="assets/icons/header/Statistics.svg" alt="Stat icon" />
             <p class="mb-0 mt-1 fw-light">Statistics</p>
           </a>
         </li>
         <li class="nav-item text-center">
-          <a href="/" class="align-middle text-decoration-none text-black">
+          <a href="/invoices.html" class="align-middle text-decoration-none text-black">
             <img src="assets/icons/header/Invoices.svg" alt="Invoices icon" />
             <p class="mb-0 mt-1 fw-light">Invoices</p>
           </a>
         </li>
         <li class="nav-item text-center">
-          <a href="/" class="align-middle text-decoration-none text-black">
+          <a href="/schedule.html" class="align-middle text-decoration-none text-black">
             <img src="assets/icons/header/Schedule.svg" alt=".Schedule icon" />
             <p class="mb-0 mt-1 fw-light">Schedule</p>
           </a>
@@ -67,25 +67,25 @@ class Header extends HTMLElement {
       </ul>
       <ul class="col justify-content-end nav gap-1 me-5" aria-label="header-nav">
         <li class="nav-item p-1 d-inline-flex align-items-center">
-          <a href="/" class="container text-decoration-none text-black fw-light">
+          <a href="/notes.html" class="container text-decoration-none text-black fw-light">
             <img src="assets/icons/header/Notes.svg" alt="Notes icon" />
             <span class="align-middle">Notes</span>
           </a>
         </li>
         <li class="nav-item p-1 d-inline-flex align-items-center">
-          <a href="/" class="container text-decoration-none text-black fw-light">
+          <a href="/friends.html" class="container text-decoration-none text-black fw-light">
             <img src="assets/icons/header/Friends.svg" alt="Friends icon" />
             <span class="align-middle">Friends</span>
           </a>
         </li>
         <li class="nav-item p-1 d-inline-flex align-items-center">
-          <a href="/" class="container text-decoration-none text-black fw-light">
+          <a href="/photo.html" class="container text-decoration-none text-black fw-light">
             <img src="assets/icons/header/Photo.svg" alt="Photo icon" />
             <span class="align-middle">Photos</span>
           </a>
         </li>
         <li class="nav-item p-1 d-inline-flex align-items-center">
-          <a href="/" class="container text-decoration-none text-black fw-light">
+          <a href="/settings.html" class="container text-decoration-none text-black fw-light">
             <img src="assets/icons/header/Settings.svg" alt="Settings icon" />
             <span class="align-middle">Settings</span>
             <img src="assets/icons/common/Dropdown.svg" width="20px" alt="Dropdown button" />

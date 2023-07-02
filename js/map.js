@@ -4,7 +4,7 @@ const locationData = {
   color: "#3b5998",
   mapFollowsOnDrag: true,
 };
-async function initMap() {
+const initMap = async () => {
   await ymaps3.ready;
   const { YMap, YMapDefaultSchemeLayer, YMapControls, YMapDefaultFeaturesLayer } = ymaps3;
 
@@ -12,15 +12,14 @@ async function initMap() {
   const { YMapDefaultMarker } = await ymaps3.import("@yandex/ymaps3-markers@0.0.1");
 
   const map = new YMap(document.getElementById("map"), { location: { center: [39.711196, 47.226039], zoom: 15 } });
-
   map.addChild((scheme = new YMapDefaultSchemeLayer()));
   map.addChild(new YMapControls({ position: "right" }).addChild(new YMapZoomControl({})));
   map.addChild(new YMapDefaultFeaturesLayer({ id: "features" }));
   map.addChild(new YMapDefaultMarker(locationData));
   deleteSpinner();
-}
+};
 
-function deleteSpinner() {
-  document.querySelector("#spinner").style;
-}
+const deleteSpinner = () => {
+  document.querySelector("#spinner").remove();
+};
 initMap();

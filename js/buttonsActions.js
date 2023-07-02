@@ -1,5 +1,5 @@
 const routes = ["/", "/map.html", "/time.html"];
-
+const navLists = ["header-nav", "upper-nav", "side-nav"];
 const getNavElements = (label) => {
   const navElements = document.querySelectorAll(`ul[aria-label="${label}"]`);
   const childs = [];
@@ -9,24 +9,36 @@ const getNavElements = (label) => {
   return childs;
 };
 
-function highlightActiveButton(label) {
+const highlightButton = (button) => {
+  button.classList.add("bg-body-secondary", "bg-opacity-50");
+};
+const removeHighlightButton = (button) => {
+  button.classList.remove("bg-body-secondary", "bg-opacity-50");
+};
+
+const highlightActiveButton = (label) => {
   const childs = getNavElements(label);
   for (let i = 0; i < childs.length; i++) {
-    window.location.pathname.endsWith(routes[i]) && childs[i].classList.add("bg-body-secondary", "bg-opacity-50");
+    if (window.location.pathname.endsWith(routes[i])) {
+      highlightButton(childs[i]);
+      break;
+    }
   }
-}
-function highlightHoverButton(label) {
+};
+const highlightHoverButton = (label) => {
   const childs = getNavElements(label);
-  for (let i = 0; i < childs.length; i++) {
-    childs[i].addEventListener("mouseenter", (event) => {
-      event.target.classList.add("bg-body-secondary", "bg-opacity-50");
+  childs.forEach((child) => {
+    child.addEventListener("mouseenter", (event) => {
+      highlightButton(event.target);
     });
-    childs[i].addEventListener("mouseleave", (event) => {
-      !window.location.pathname.endsWith(routes[i]) &&
-        event.target.classList.remove("bg-body-secondary", "bg-opacity-50");
+    child.addEventListener("mouseleave", (event) => {
+      const currentLink = event.target.querySelector("a").pathname;
+      !window.location.pathname.endsWith(currentLink) && removeHighlightButton(event.target);
     });
-  }
-}
-highlightHoverButton("header-nav");
+  });
+};
+
+
+navLists.forEach((navLst) => highlightHoverButton(navLst));
 
 document.addEventListener("DOMContentLoaded", () => highlightActiveButton("header-nav"));
