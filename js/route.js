@@ -4,6 +4,8 @@ import { highlightActiveButton, handleSideBarButton } from "./utils/buttons.js";
 const loadScript = async (src) => {
   return new Promise(function (resolve, reject) {
     if (scriptIsLoaded(src)) {
+      src.endsWith("map.js") && initMap();
+      src.endsWith("dropdownMenu.js") && toggleDropdownMenu();
       return resolve();
     }
     let script = document.createElement("script");
@@ -26,7 +28,6 @@ const locationHandler = async () => {
     throw new Error("Something went wrong!");
   }
   route?.scripts?.reduce((acc, src) => acc.then(() => loadScript(src)), Promise.resolve());
-  location === "/map" && scriptIsLoaded(ROUTES[location].scripts[1]) && initMap();
 };
 
 const route = (event) => {
@@ -34,7 +35,7 @@ const route = (event) => {
   const target = event && getTarget(event);
   target && window.history.pushState({}, "", isNotLocalhost ? REPO_NAME + target.pathname : target.pathname);
   locationHandler();
-  highlightActiveButton();
+  highlightActiveButton("header-nav");
   handleSideBarButton();
 };
 window.onpopstate = locationHandler;

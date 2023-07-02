@@ -16,10 +16,12 @@
   height: 100px;
 }
 
-article > img {
-  max-height: 650px;
+article > div > img {
+  max-height: 200px;
 }
-
+article > div > h6 {
+  font-size: 80px;
+}
 @media screen and (min-width: 992px) {
   #map {
     height: 700px;

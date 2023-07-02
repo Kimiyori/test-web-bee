@@ -1,18 +1,20 @@
 export const ROUTES = {
   "/": {
-    template: "/pages/activity.html",
+    template: "/pages/index.html",
     title: "Activity",
-    scripts: ["js/components/activity/block.js", "js/components/activity/navElement.js"],
+    scripts: ["components/skillsList.js", "components/sideNavElement.js", "js/utils/dropdownMenu.js"],
   },
-  "/activity": {
-    template: "/pages/activity.html",
+  "/resume": {
+    template: "/pages/index.html",
     title: "Activity",
-    scripts: ["js/components/activity/block.js", "s/components/activity/navElement.js"],
+    scripts: ["components/skillsList.js", "components/sideNavElement.js", "js/utils/dropdownMenu.js"],
   },
   "/map": {
     template: "/pages/map.html",
     title: "Map",
     scripts: [
+      "components/wrapper.js",
+      "js/utils/dropdownMenu.js",
       "https://api-maps.yandex.ru/3.0/?apikey=408b142c-6392-4e29-8703-3017a9505008&lang=en_EN",
       "js/map/map.js",
     ],
@@ -20,6 +22,7 @@ export const ROUTES = {
   "/time": {
     template: "/pages/time.html",
     title: "Time",
+    scripts: ["js/utils/dropdownMenu.js", "components/wrapper.js"],
   },
 };
 
