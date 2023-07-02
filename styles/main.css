@@ -12,6 +12,10 @@
 #map {
  height: 700px;
 }
+#spinner {
+  height: 200px;
+  width: 200px;
+}
 article > div > img {
   max-height: 200px;
 }
