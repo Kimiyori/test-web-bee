@@ -4,8 +4,8 @@ const formattingTime = (time) => {
   return time.toString().padStart(2, "0");
 };
 
-const myTimer = () => {
-  time++;
+export const myTimer = (update = true) => {
+  update && time++;
   const hours = formattingTime(Math.floor(time / 60 / 60));
   const minutes = formattingTime(Math.floor((time / 60) % 60));
   const seconds = formattingTime(Math.floor(time % 60));

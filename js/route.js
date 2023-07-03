@@ -1,5 +1,6 @@
 import { isNotLocalhost, ROUTES, REPO_NAME, getTarget, scriptIsLoaded } from "./utils/routes.js";
 import { highlightActiveButton, handleSideBarButton } from "./utils/buttons.js";
+import { myTimer } from "./timer/timer.js";
 
 const loadScript = async (src) => {
   return new Promise(function (resolve, reject) {
@@ -28,6 +29,7 @@ const locationHandler = async () => {
     throw new Error("Something went wrong!");
   }
   route?.scripts?.reduce((acc, src) => acc.then(() => loadScript(src)), Promise.resolve());
+  window.location.pathname.endsWith("time") && myTimer(false);
 };
 
 const route = (event) => {
