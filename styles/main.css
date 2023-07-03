@@ -15,7 +15,9 @@
   width: 100px;
   height: 100px;
 }
-
+#offcanvasResponsive {
+  min-width: 300px;
+}
 article > div > img {
   max-height: 200px;
 }

@@ -1,12 +1,12 @@
 export const ROUTES = {
   "/": {
     template: "/pages/index.html",
-    title: "Activity",
+    title: "Resume",
     scripts: ["components/skillsList.js", "components/sideNavElement.js", "js/utils/dropdownMenu.js"],
   },
   "/resume": {
     template: "/pages/index.html",
-    title: "Activity",
+    title: "Resume",
     scripts: ["components/skillsList.js", "components/sideNavElement.js", "js/utils/dropdownMenu.js"],
   },
   "/map": {
