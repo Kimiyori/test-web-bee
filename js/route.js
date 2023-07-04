@@ -1,22 +1,8 @@
-import { isNotLocalhost, ROUTES, REPO_NAME, getTarget, scriptIsLoaded } from "./utils/routes.js";
+import { isNotLocalhost, ROUTES, REPO_NAME, getTarget } from "./utils/routes.js";
 import { highlightActiveButton, handleSideBarButton } from "./utils/buttons.js";
 import { myTimer } from "./timer/timer.js";
+import { handleScriptLoading } from "./utils/loadScripts.js";
 
-const loadScript = async (src) => {
-  return new Promise(function (resolve, reject) {
-    if (scriptIsLoaded(src)) {
-      src.endsWith("map.js") && initMap();
-      src.endsWith("dropdownMenu.js") && toggleDropdownMenu();
-      return resolve();
-    }
-    let script = document.createElement("script");
-    script.src = src;
-    script.onload = () => resolve(script);
-    script.onerror = () => reject(new Error(`Something went wrong with ${src}`));
-
-    document.body.append(script);
-  });
-};
 const locationHandler = async () => {
   const location = isNotLocalhost ? window.location.pathname.replace(REPO_NAME, "") : window.location.pathname;
   const route = ROUTES[location];
@@ -28,7 +14,7 @@ const locationHandler = async () => {
   } catch (e) {
     throw new Error("Something went wrong!");
   }
-  route?.scripts?.reduce((acc, src) => acc.then(() => loadScript(src)), Promise.resolve());
+  handleScriptLoading(route);
   window.location.pathname.endsWith("time") && myTimer(false);
 };
 

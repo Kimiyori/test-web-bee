@@ -34,7 +34,3 @@ export const getTarget = (event) => {
   const isAnchor = event.target.tagName.toLowerCase() === "a";
   return isAnchor ? event.target : event.target.closest("a");
 };
-
-export const scriptIsLoaded = (src) => {
-  return Boolean(document.querySelector(`script[src="${src}"]`));
-};
