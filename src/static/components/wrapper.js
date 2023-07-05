@@ -16,17 +16,17 @@ class Wrapper extends HTMLElement {
     <h4 class="fw-normal">${title}</h4>
     <ul class="nav gap-3">
       <li class="nav-item p-1 drop-toggle">
-        <img src="assets/icons/common/Dropdown.svg" alt="Dropdown" />
+        <img src="static/assets/icons/common/Dropdown.svg" alt="Dropdown" />
       </li>
       <li class="nav-item p-1">
-        <img src="assets/icons/common/Reload.svg" alt="Reload" />
+        <img src="static/assets/icons/common/Reload.svg" alt="Reload" />
       </li>
       <li class="nav-item p-1">
-        <img src="assets/icons/common/Close.svg" alt="Close" />
+        <img src="static/assets/icons/common/Close.svg" alt="Close" />
       </li>
     </ul>
   </div>
-  <div class="position-relative d-flex justify-content-center align-items-center drop-down" id="${mark}">
+  <div class="d-flex justify-content-center align-items-center drop-down" id="${mark}">
       ${hasChilds ? Array.from(this.children).reduce((acc, child) => acc + child.outerHTML.toString(), "") : ""}
   </div>
       `;

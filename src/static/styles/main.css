@@ -14,6 +14,7 @@
 #spinner {
   width: 100px;
   height: 100px;
+  display:none;
 }
 #offcanvasResponsive {
   min-width: 300px;

@@ -1,9 +1,11 @@
+export default async function Resume  ()  {
+  return `
 <main class="bg-light m-lg-5 m-2">
   <div class="row">
     <section class="col d-flex flex-column gap-4 h-100">
       <article class="bg-white p-4">
         <div class="position-relative">
-          <img src="assets/img/abstractimg.jpeg" class="w-100 object-fit-cover" alt="Resume Image" />
+          <img src="static/assets/img/abstractimg.jpeg" class="w-100 object-fit-cover" alt="Resume Image" />
           <h6
             class="position-absolute top-50 start-50 translate-middle text-white w-100 bg-body-secondary bg-opacity-50 text-center"
           >
@@ -13,21 +15,21 @@
         <hr class="solid" />
         <address class="d-flex flex-column flex-sm-row gap-4 justify-content-evenly mb-0">
           <div class="d-flex flex-column align-items-center gap-3">
-            <img src="assets/icons/resume/contact/City.svg" alt="City" />
+            <img src="static/assets/icons/resume/contact/City.svg" alt="City" />
             <p class="text-decoration-none text-black" href="mailto:jim@rock.com">Rostov-on-Don</p>
           </div>
           <a
             class="text-decoration-none text-black d-flex flex-column align-items-center gap-3"
             href="mailto:maksimkalin17@gmail.com"
           >
-            <img src="assets/icons/resume/contact/Email.svg" alt="Email" />
+            <img src="static/assets/icons/resume/contact/Email.svg" alt="Email" />
             <p>maksimkalin17@gmail.com</p></a
           >
           <a
             class="text-decoration-none text-black d-flex flex-column align-items-center gap-3"
             href="tel:+79381081108"
           >
-            <img src="assets/icons/resume/contact/Phone.svg" alt="Phone" />
+            <img src="static/assets/icons/resume/contact/Phone.svg" alt="Phone" />
             <p>+7 (938) 108-11-08</p></a
           >
         </address>
@@ -65,71 +67,81 @@
       </div>
       <div class="offcanvas-body flex-column d-flex gap-4">
         <aside class="row bg-white text-center py-3 px-5 g-1 justify-content-center">
-          <img class="rounded-circle mb-3 img-fluid" src="assets/img/user-avatar.png" alt="User avatar" />
+          <img class="rounded-circle mb-3 img-fluid" src="static/assets/img/user-avatar.png" alt="User avatar" />
           <h5 class="fs-5 mb-3 fw-normal">Maxim Maxim</h5>
           <h4 class="fs-6 mb-3 fst-italic fw-light">Web programmer</h4>
           <div class="d-flex justify-content-center gap-3">
             <a href="https://t.me/tooooooook/">
-              <img src="assets/icons/resume/nav/Telegram.svg" alt="Telegram" />
+              <img src="static/assets/icons/resume/nav/Telegram.svg" alt="Telegram" />
             </a>
             <a href="https://github.com/Kimiyori">
-              <img src="assets/icons/resume/nav/Github.svg" alt="Github" />
+              <img src="static/assets/icons/resume/nav/Github.svg" alt="Github" />
             </a>
             <a href="https://twitter.com/xmayedax">
-              <img src="assets/icons/resume/nav/Twitter.svg" alt="Twitter" />
+              <img src="static/assets/icons/resume/nav/Twitter.svg" alt="Twitter" />
             </a>
           </div>
         </aside>
         <aside class="row bg-white g-1 px-4 py-3">
           <div class="d-flex justify-content-between mb-2 drop-toggle">
             <h4 class="m-0 fs-6 fw-normal">Navigation</h4>
-            <img src="assets/icons/resume/nav/UpButton.svg" alt="UpButton icon" />
+            <img src="static/assets/icons/resume/nav/UpButton.svg" alt="UpButton icon" />
           </div>
-          <ul class="nav flex-column drop-down" aria-label="side-nav">
-            <hr class="solid mt-0" />
-            <side-nav-item
-              image="assets/icons/resume/nav/MyProfile.svg"
-              title="My profile"
-              alt="MyProfile"
-              href="/profile.html"
-            ></side-nav-item>
-            <side-nav-item
-              image="assets/icons/resume/nav/Balance.svg"
-              title="Balance"
-              alt="Balance"
-              href="/balance.html"
-            ></side-nav-item>
-            <side-nav-item
-              image="assets/icons/resume/nav/Connections.svg"
-              title="Connections"
-              alt="Connections"
-              href="/conn.html"
-            ></side-nav-item>
-            <side-nav-item
-              image="assets/icons/resume/nav/FriendsNavigation.svg"
-              title="Friends"
-              alt="Friends"
-              href="/friends.html"
-            ></side-nav-item>
-            <hr class="solid" />
-            <side-nav-item
-              image="assets/icons/resume/nav/Events.svg"
-              title="Events"
-              alt="Events"
-              href="/events.html"
-            ></side-nav-item>
-            <side-nav-item
-              image="assets/icons/resume/nav/SettingsNavigation.svg"
-              title="Account settings"
-              alt="Settings"
-              href="/settings.html"
-            ></side-nav-item>
-          </ul>
+      <ul class="nav flex-column drop-down" aria-label="side-nav">
+        <hr class="solid mt-0" />
+        <li class="nav-item fs-6 mb-3">
+          <a href="/profile" class="text-decoration-none text-black">
+            <img src="static/assets/icons/resume/nav/MyProfile.svg" alt="MyProfile" />
+            <span>My profile</span>
+          </a>
+        </li>
+
+        <li class="nav-item fs-6 mb-3">
+          <a href="/balance" class="text-decoration-none text-black">
+            <img src="static/assets/icons/resume/nav/Balance.svg" alt="Balance" />
+            <span>Balance</span>
+          </a>
+        </li>
+
+        <li class="nav-item fs-6 mb-3">
+          <a href="/conn" class="text-decoration-none text-black">
+            <img src="static/assets/icons/resume/nav/Connections.svg" alt="Connections" />
+            <span>Connections</span>
+          </a>
+        </li>
+
+        <li class="nav-item fs-6 mb-3">
+          <a href="/friends" class="text-decoration-none text-black">
+            <img src="static/assets/icons/resume/nav/FriendsNavigation.svg" alt="Friends" />
+            <span>Friends</span>
+          </a>
+        </li>
+        <hr class="solid" />
+        <side-nav-item
+          image="static/assets/icons/resume/nav/Events.svg"
+          title="Events"
+          alt="Events"
+          href="/events.html"
+        ></side-nav-item>
+        <li class="nav-item fs-6 mb-3">
+          <a href="/events" class="text-decoration-none text-black">
+            <img src="static/assets/icons/resume/nav/Events.svg" alt="Events" />
+            <span>Events</span>
+          </a>
+        </li>
+
+        <li class="nav-item fs-6 mb-3">
+          <a href="/settings" class="text-decoration-none text-black">
+            <img src="static/assets/icons/resume/nav/SettingsNavigation.svg" alt="Settings" />
+            <span>Account settings</span>
+          </a>
+        </li>
+      </ul>
         </aside>
         <aside class="row bg-white g-1 px-4 py-3">
           <div class="d-flex justify-content-between mb-2 drop-toggle">
             <h4 class="fs-6 fw-normal">Share your thoughts</h4>
-            <img src="assets/icons/resume/nav/UpButton.svg" alt="UpButton" />
+            <img src="static/assets/icons/resume/nav/UpButton.svg" alt="UpButton" />
           </div>
           <div class="drop-down">
             <hr class="solid" />
@@ -141,3 +153,6 @@
     </div>
   </div>
 </main>
+
+        `;
+};

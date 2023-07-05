@@ -6,6 +6,7 @@ const locationData = {
 };
 
 const initMap = async () => {
+  showSpinner();
   await ymaps3.ready;
   const { YMap, YMapDefaultSchemeLayer, YMapControls, YMapDefaultFeaturesLayer } = ymaps3;
 
@@ -20,7 +21,10 @@ const initMap = async () => {
   map.addChild(new YMapDefaultMarker(locationData));
   hideSpinner();
 };
-
+const showSpinner = () => {
+  const spinner = document.querySelector("#spinner");
+  spinner.style.display = "block";
+};
 const hideSpinner = () => {
   document.querySelector("#spinner").style.display = "none";
 };

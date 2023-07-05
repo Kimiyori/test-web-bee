@@ -1,4 +1,3 @@
-const routes = ["/", "/map", "/time"];
 const navLists = ["header-nav", "upper-nav", "side-nav"];
 const getNavElements = (label) => {
   const navElements = document.querySelectorAll(`ul[aria-label="${label}"]`);
@@ -19,14 +18,16 @@ const removeHighlightButton = (button) => {
 export const highlightActiveButton = (label) => {
   const childs = getNavElements(label);
   childs.forEach((el) => {
+    window.location.pathname === el.querySelector("a").pathname && highlightButton(el);
     el.onclick = () => {
-      childs.forEach((el) => el.classList.remove("bg-body-secondary", "bg-opacity-50"));
-      el.classList.add("bg-body-secondary", "bg-opacity-50");
+      childs.forEach((el) => removeHighlightButton(el));
+      highlightButton(el);
     };
   });
 };
 const highlightHoverButton = (label) => {
   const childs = getNavElements(label);
+
   childs.forEach((child) => {
     child.addEventListener("mouseenter", (event) => {
       highlightButton(event.target);
@@ -38,11 +39,11 @@ const highlightHoverButton = (label) => {
   });
 };
 
-navLists.forEach((navLst) => highlightHoverButton(navLst));
-
-document.addEventListener("DOMContentLoaded", () => highlightActiveButton("header-nav"));
+export const handleHoverButtons = () => {
+  navLists.forEach((navLst) => highlightHoverButton(navLst));
+};
 export const handleSideBarButton = () => {
   const location = window.location.pathname;
   const sideBarButton = document.querySelector("#sidebar-menu");
-  sideBarButton.hidden = location.endsWith("/") || location.endsWith("activity") ? false : true;
+  sideBarButton.hidden = location.endsWith("/") || location.endsWith("resume") ? false : true;
 };
