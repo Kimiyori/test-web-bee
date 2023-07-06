@@ -6,7 +6,7 @@ const locationData = {
 };
 
 const initMap = async () => {
-  showSpinner();
+
   await ymaps3.ready;
   const { YMap, YMapDefaultSchemeLayer, YMapControls, YMapDefaultFeaturesLayer } = ymaps3;
 

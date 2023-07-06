@@ -1,6 +1,6 @@
 export default async function Resume  ()  {
   return `
-<main class="bg-light m-lg-5 m-2">
+<main class="bg-light p-lg-5 p-2">
   <div class="row">
     <section class="col d-flex flex-column gap-4 h-100">
       <article class="bg-white p-4">

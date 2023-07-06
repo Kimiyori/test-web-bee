@@ -9,7 +9,7 @@ class Header extends HTMLElement {
 
   render() {
     this.innerHTML = ` 
-<header>
+<header class="bg-light">
    <section id="upper-header" class="z-1 p-1 px-0 bg-light shadow-sm navbar navbar-expand-lg">
       <figure class="fs-5 navbar-brand ms-5 m-0">
          <img src="static/assets/icons/header/Back.svg" alt="..." />
