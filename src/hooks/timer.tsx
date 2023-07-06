@@ -1,11 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export const useTimer = () => {
-  const [seconds, setSeconds] = useState(0);
+export const useTimer = (initialState = 0) => {
+  const [timer, setTimer] = useState(initialState);
+  const countRef = useRef<ReturnType<typeof setInterval> | undefined>();
+
   useEffect(() => {
-    setTimeout(function () {
-      setSeconds(() => seconds + 1);
+    countRef.current = setTimeout(() => {
+      setTimer(() => timer + 1);
     }, 1000);
-  }, [seconds]);
-  return seconds;
+  }, [timer]);
+  const handleReset = () => {
+    clearInterval(countRef.current);
+    setTimer(0);
+  };
+
+  return { timer, handleReset };
 };

@@ -1,5 +1,5 @@
-import UpButton from "../../../assets/icons/UpButton.svg";
-import DownButton from "../../../assets/icons/Dropdown.svg";
+import UpButton from "../../../assets/icons/resume/nav/UpButton.svg";
+import DownButton from "../../../assets/icons/common/Dropdown.svg";
 import { useReducer } from "react";
 type DropdownMenuType = {
   title: string;

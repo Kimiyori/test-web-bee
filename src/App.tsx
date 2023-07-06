@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ActivityPage from "./pages/activity.page";
+import ActivityPage from "./pages/resume.page";
 import Map from "./pages/map.page";
 import Time from "./pages/time.page";
-import { TimerProvider } from "./features/timerContext";
+import { TimerProvider } from "./context/timerContext";
 import MainLayout from "./components/shared/UI/MainLayout";
 function App() {
   return (

@@ -1,0 +1,38 @@
+#user-avatar {
+  max-width: 200px;
+  max-height: 200px;
+}
+#upper-header {
+  min-height: 64px;
+}
+#bottom-header > div > ul {
+  min-height: 40px;
+}
+#map {
+  width:100%;
+  height: 300px;
+}
+#spinner {
+  width: 100px;
+  height: 100px;
+}
+#offcanvasResponsive {
+  min-width: 300px;
+}
+article > div > img {
+  max-height: 200px;
+}
+article > div > h6 {
+  font-size: 80px;
+}
+
+@media screen and (min-width: 992px) {
+  #map {
+
+  height: 700px;
+}
+  #spinner {
+  width: 200px;
+  height: 200px;
+}
+}

@@ -1,16 +1,21 @@
-import MapComponent from "../components/shared/Entity/MapComponent";
-import { ElementWrapper } from "../components/shared/UI/ElementWrapper";
+import { useState } from "react";
+import MapComponent from "../components/shared/Entity/Map/Map";
+import { ElementWrapper } from "../components/shared/UI/WrapperBlock";
 import { usePageTitle } from "../hooks/title";
 
 const Map = () => {
+    const [seed, setSeed] = useState(1);
+    const reset = () => {
+      setSeed(Math.random());
+    };
   usePageTitle("Map");
   return (
     <>
-      <ElementWrapper name="Yandex Map">
+      <ElementWrapper name="Yandex Map" reload={reset}>
         <div
           className="position-relative d-flex justify-content-center align-items-center w-100 "
           id="map"
-          style={{ height: "500px" }}
+          key={seed}
         >
           <MapComponent />
         </div>
