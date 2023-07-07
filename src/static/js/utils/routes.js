@@ -43,7 +43,7 @@ export const getTarget = (event) => {
 export const updateTitle = (title) => (document.title = title);
 
 export const handleLoadActions = () => {
-  window.location.pathname.endsWith("time") && myTimer(false);
+  window.location.pathname.endsWith("time") && myTimer();
   handleSideBarButton();
   handleHoverButtons();
   toggleDropdownMenu();
