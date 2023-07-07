@@ -1,7 +1,7 @@
 let timerRef;
 const initialTime = new Date();
 const formattingTime = (time) => {
-  return time.toString().padStart(2, "0");
+  return time.toString().padStart(2, '0');
 };
 const getTimeRepsesentation = (time) => {
   const hours = formattingTime(Math.floor(time / 60 / 60));
@@ -19,10 +19,12 @@ const resetTimer = () => {
 };
 
 export const myTimer = () => {
-  const isTimePage = window.location.pathname.endsWith("/time");
+  const isTimePage = window.location.pathname.endsWith('/time');
   if (isTimePage) {
     startTime();
-    document.querySelector("#timer").textContent = getTimeRepsesentation(Math.floor((new Date() - initialTime) / 1000));
+    document.querySelector('#timer').textContent = getTimeRepsesentation(
+      Math.floor((new Date() - initialTime) / 1000)
+    );
   }
   !isTimePage && !timerRef && resetTimer();
 };

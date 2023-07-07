@@ -4,7 +4,7 @@ class SkillsList extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["title", "skills"];
+    return ['title', 'skills'];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -19,8 +19,10 @@ class SkillsList extends HTMLElement {
             <h5 class="mb-4">${title}</h5>
             <div class="d-flex flex-row flex-wrap gap-4">
              ${skills.reduce(
-               (acc, skill) => acc + `<span class="bg-body-secondary bg-opacity-75 px-4 py-2 rounded">${skill}</span>`,
-               ""
+               (acc, skill) =>
+                 acc +
+                 `<span class="bg-body-secondary bg-opacity-75 px-4 py-2 rounded">${skill}</span>`,
+               ''
              )}
             </div>
         </article>
@@ -28,4 +30,4 @@ class SkillsList extends HTMLElement {
   }
 }
 
-customElements.define("skills-list", SkillsList);
+customElements.define('skills-list', SkillsList);

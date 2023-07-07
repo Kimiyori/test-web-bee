@@ -148,4 +148,4 @@ class Header extends HTMLElement {
   }
 }
 
-customElements.define("main-header", Header);
+customElements.define('main-header', Header);

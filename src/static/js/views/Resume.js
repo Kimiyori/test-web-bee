@@ -1,4 +1,4 @@
-export default async function Resume  ()  {
+export default async function Resume() {
   return `
 <main class="bg-light p-lg-5 p-2">
   <div class="row">
@@ -155,4 +155,4 @@ export default async function Resume  ()  {
 </main>
 
         `;
-};
+}

@@ -28,11 +28,15 @@ class Wrapper extends HTMLElement {
     </ul>
   </div>
   <div class="d-flex justify-content-center align-items-center drop-down pb-4" id="${mark}">
-      ${hasChilds ? Array.from(this.children).reduce((acc, child) => acc + child.outerHTML.toString(), "") : ""}
+      ${
+        hasChilds
+          ? Array.from(this.children).reduce((acc, child) => acc + child.outerHTML.toString(), '')
+          : ''
+      }
   </div>
   </div>
       `;
   }
 }
 
-customElements.define("wrapper-element", Wrapper);
+customElements.define('wrapper-element', Wrapper);

@@ -11,13 +11,13 @@
 #map {
   height: 700px;
 }
-#content{
+#content {
   height: calc(100vh - 104px);
 }
 #spinner {
   width: 100px;
   height: 100px;
-  display:none;
+  display: none;
 }
 #offcanvasResponsive {
   min-width: 300px;
@@ -29,8 +29,8 @@ article > div > h6 {
   font-size: 80px;
 }
 @media screen and (min-width: 992px) {
-
   #spinner {
-  width: 200px;
-  height: 200px;
+    width: 200px;
+    height: 200px;
+  }
 }
