@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
-import { THeaderBottomLink } from "./HeaderBottomLink";
 import Settings from "../../../../../assets//icons/header/Settings.svg";
 import { useHover } from "hooks/hover";
 import { useContext } from "react";
 import { ActiveButtonrContext } from "components/shared/UI/Header";
+import { TNavLink } from "utils/types";
 
-const SettingsOption = ({
-  url,
-  name,
-}: Pick<THeaderBottomLink, "url" | "name">) => {
+const SettingsOption = ({ url, name }: Pick<TNavLink, "url" | "name">) => {
   return (
     <li>
       <Link
@@ -21,7 +18,7 @@ const SettingsOption = ({
   );
 };
 
-const HeaderBottomSettings = ({ url }: Pick<THeaderBottomLink, "url">) => {
+const HeaderBottomSettings = ({ url }: Pick<TNavLink, "url">) => {
   const { isHover, changeHoverState } = useHover();
   const { activeButton } = useContext(ActiveButtonrContext);
   return (

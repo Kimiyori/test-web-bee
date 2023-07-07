@@ -1,13 +1,8 @@
 import { useHover } from "hooks/hover";
 import { Link } from "react-router-dom";
+import { TNavLink } from "utils/types";
 
-type TSideBarNavElement = {
-  url: string;
-  img: { image: string; altName: string };
-  name: string;
-};
-
-const SideBarNavElement = ({ url, img, name }: TSideBarNavElement) => {
+const SideBarNavElement = ({ url, img, name }: TNavLink) => {
   const { isHover, changeHoverState } = useHover();
   return (
     <>

@@ -2,17 +2,9 @@ import { ActiveButtonrContext } from "components/shared/UI/Header";
 import { useHover } from "hooks/hover";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-export type THeaderBottomLink = {
-  url: string;
-  img: { image: string; altName: string };
-  name: string;
-};
+import { TNavLink } from "utils/types";
 
-export const HeaderBottomLink = ({
-  url,
-  img,
-  name,
-}: THeaderBottomLink) => {
+export const HeaderBottomLink = ({ url, img, name }: TNavLink) => {
   const { isHover, changeHoverState } = useHover();
   const { activeButton } = useContext(ActiveButtonrContext);
   return (
