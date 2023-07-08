@@ -4,7 +4,8 @@ import Timer from '../views/Timer.js';
 import { myTimer } from '../timer/timer.js';
 import { toggleDropdownMenu } from '../utils/dropdownMenu.js';
 import { handleSideBarButton, handleHoverButtons } from '../utils/buttons.js';
-export const ROUTES = {
+
+const ROUTES = {
   '/': {
     template: Resume,
     title: 'Resume',
