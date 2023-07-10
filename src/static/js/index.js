@@ -8,18 +8,17 @@ import {
 } from './utils/routes.js';
 import { handleScriptLoading } from './utils/loadScripts.js';
 
-const route = async () => {
+const handleRouting = async () => {
   const route = findMatchRoute();
   await assignHtml(route);
   await handleScriptLoading(route);
   updateTitle(route.title);
   handleLoadActions();
-  3;
 };
 
 const navigateTo = (pathname) => {
   history.pushState(null, null, pathname);
-  route();
+  handleRouting();
 };
 
 const setClickNavEvents = () => {
@@ -36,6 +35,6 @@ const setClickNavEvents = () => {
 document.addEventListener('DOMContentLoaded', () => {
   highlightActiveButton('header-nav');
   setClickNavEvents();
-  route();
+  handleRouting();
 });
-window.addEventListener('popstate', route);
+window.addEventListener('popstate', handleRouting);
