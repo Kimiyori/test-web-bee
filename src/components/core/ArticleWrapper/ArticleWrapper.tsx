@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode } from 'react';
 type TArticle = {
   children?: JSX.Element | JSX.Element[] | ReactNode[];
 };

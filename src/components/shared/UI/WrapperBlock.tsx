@@ -1,7 +1,7 @@
-import Dropdown from "../../../assets/icons/common/Dropdown.svg";
-import Reload from "../../../assets/icons/common/Reload.svg";
-import Close from "../../../assets/icons/common/Close.svg";
-import { FC, useReducer } from "react";
+import Dropdown from '../../../assets/icons/common/Dropdown.svg';
+import Reload from '../../../assets/icons/common/Reload.svg';
+import Close from '../../../assets/icons/common/Close.svg';
+import { FC, useReducer } from 'react';
 type Props = {
   name: string;
   reload: () => void;
@@ -15,11 +15,7 @@ export const ElementWrapper: FC<Props> = ({ name, reload, children }) => {
     <>
       {!show && (
         <main className=" m-2 m-lg-5">
-          <button
-            onClick={() => changeVisibility()}
-            type="button"
-            className="btn btn-primary w-100 "
-          >
+          <button onClick={() => changeVisibility()} type="button" className="btn btn-primary w-100 ">
             Open
           </button>
         </main>

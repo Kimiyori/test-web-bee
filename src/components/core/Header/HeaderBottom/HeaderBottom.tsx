@@ -1,17 +1,14 @@
-import { useContext } from "react";
-import HeaderBottomLeftNav from "./elements/HeaderBottomLeftNav";
-import HeaderBottomRightNav from "./elements/HeaderBottomRightNav";
-import { ActiveButtonrContext } from "components/shared/UI/Header";
+import { useContext } from 'react';
+import HeaderBottomLeftNav from './elements/HeaderBottomLeftNav';
+import HeaderBottomRightNav from './elements/HeaderBottomRightNav';
+import { ActiveButtonrContext } from 'components/shared/UI/Header';
 
 export const BottomHeader = () => {
-  const {activeButton} = useContext(ActiveButtonrContext)
+  const { activeButton } = useContext(ActiveButtonrContext);
   return (
     <>
-      <section
-        id="bottom-header"
-        className="navbar navbar-expand-lg bg-white shadow-sm fs-6 py-lg-0"
-      >
-        {activeButton === "/" && (
+      <section id="bottom-header" className="navbar navbar-expand-lg bg-white shadow-sm fs-6 py-lg-0">
+        {activeButton === '/' && (
           <button
             className="btn d-lg-none bg-body-secondary bg-opacity-50 ms-5"
             type="button"
@@ -38,7 +35,7 @@ export const BottomHeader = () => {
           className=" mx-5 collapse navbar-collapse mt-3 mt-lg-0 justify-content-between"
           id="navbarSupportedContent"
         >
-          <HeaderBottomLeftNav  />
+          <HeaderBottomLeftNav />
           <hr className="hr" />
           <HeaderBottomRightNav />
         </div>

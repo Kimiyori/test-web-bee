@@ -1,16 +1,16 @@
-import { AddressElement } from "../components/core/AddressElement/AddressElement";
-import { ArticleWrapper } from "../components/core/ArticleWrapper/ArticleWrapper";
-import ResumeImage from "../assets/img/abstractimg.jpeg";
-import SkillList from "../components/core/SkillList/SkillList";
-import { usePageTitle } from "../hooks/title";
-import { UserSummary } from "../components/core/SideBar/SideBarUserInfo";
-import { SideBarNavigation } from "../components/core/SideBar/SideBarNavigation/SideBarNavigation";
-import { SideBarComments } from "../components/core/SideBar/SideBarComments";
-import { addresses, skillsList } from "data/resume";
-import { Fragment } from "react";
+import { AddressElement } from '../components/core/AddressElement/AddressElement';
+import { ArticleWrapper } from '../components/core/ArticleWrapper/ArticleWrapper';
+import ResumeImage from '../assets/img/abstractimg.jpeg';
+import SkillList from '../components/core/SkillList/SkillList';
+import { usePageTitle } from '../hooks/UseTitle';
+import { UserSummary } from '../components/core/SideBar/SideBarUserInfo';
+import { SideBarNavigation } from '../components/core/SideBar/SideBarNavigation/SideBarNavigation';
+import { SideBarComments } from '../components/core/SideBar/SideBarComments';
+import { addresses, skillsList } from 'data/resume';
+import { Fragment } from 'react';
 
 const ActivityPage = () => {
-  usePageTitle("Resume");
+  usePageTitle('Resume');
   return (
     <>
       <main className="bg-light m-lg-5 m-2">
@@ -18,11 +18,7 @@ const ActivityPage = () => {
           <section className="col d-flex flex-column gap-4 h-100">
             <ArticleWrapper>
               <div className="position-relative">
-                <img
-                  src={ResumeImage}
-                  className="w-100 object-fit-cover"
-                  alt="Resume"
-                />
+                <img src={ResumeImage} className="w-100 object-fit-cover" alt="Resume" />
                 <h6 className="position-absolute top-50 start-50 translate-middle text-white w-100 bg-body-secondary bg-opacity-50 text-center">
                   Resume
                 </h6>

@@ -1,50 +1,38 @@
-import { Link } from "react-router-dom";
-import Settings from "../../../../../assets//icons/header/Settings.svg";
-import { useHover } from "hooks/hover";
-import { useContext } from "react";
-import { ActiveButtonrContext } from "components/shared/UI/Header";
-import { TNavLink } from "utils/types";
+import { Link } from 'react-router-dom';
+import Settings from '../../../../../assets//icons/header/Settings.svg';
+import { useHover } from 'hooks/UseHover';
+import { useContext } from 'react';
+import { ActiveButtonrContext } from 'components/shared/UI/Header';
+import { TNavLink } from 'utils/types';
 
-const SettingsOption = ({ url, name }: Pick<TNavLink, "url" | "name">) => {
+const SettingsOption = ({ url, name }: Pick<TNavLink, 'url' | 'name'>) => {
   return (
     <li>
-      <Link
-        to={url}
-        className=" dropdown-item align-middle text-decoration-none text-black fw-light"
-      >
+      <Link to={url} className=" dropdown-item align-middle text-decoration-none text-black fw-light">
         {name}
       </Link>
     </li>
   );
 };
 
-const HeaderBottomSettings = ({ url }: Pick<TNavLink, "url">) => {
+const HeaderBottomSettings = ({ url }: Pick<TNavLink, 'url'>) => {
   const { isHover, changeHoverState } = useHover();
   const { activeButton } = useContext(ActiveButtonrContext);
   return (
     <>
       <li
         className={
-          "nav-item d-inline-flex align-items-center " +
-          (activeButton === url || isHover
-            ? " bg-body-secondary bg-opacity-50"
-            : "")
+          'nav-item d-inline-flex align-items-center ' +
+          (activeButton === url || isHover ? ' bg-body-secondary bg-opacity-50' : '')
         }
         onMouseEnter={changeHoverState}
         onMouseLeave={changeHoverState}
       >
-        <div
-          className="dropdown-toggle"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <Link
-            to={"/settings"}
-            className="container text-decoration-none text-black fw-light"
-          >
-            <img src={Settings} alt={"Settings"} className="align-middle" />
+        <div className="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <Link to={'/settings'} className="container text-decoration-none text-black fw-light">
+            <img src={Settings} alt={'Settings'} className="align-middle" />
 
-            <span className=" align-middle"> {"Settings"}</span>
+            <span className=" align-middle"> {'Settings'}</span>
           </Link>
         </div>
         <ul className="dropdown-menu position-absolute dropdown-menu-lg-end">

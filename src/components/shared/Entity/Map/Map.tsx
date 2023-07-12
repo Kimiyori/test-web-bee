@@ -1,11 +1,11 @@
-import { YMaps, useYMaps } from "@pbe/react-yandex-maps";
-import LoadingElement from "components/core/LoadingElement/LoadingElement";
-import { MAP_API_KEY, mapData } from "data/map";
-import { useEffect, useRef } from "react";
+import { YMaps, useYMaps } from '@pbe/react-yandex-maps';
+import LoadingElement from 'components/core/LoadingElement/LoadingElement';
+import { MAP_API_KEY, mapData } from 'data/map';
+import { useEffect, useRef } from 'react';
 
 const MapElement = () => {
   const mapRef = useRef(null);
-  const ymaps = useYMaps(["Map", "Placemark"]);
+  const ymaps = useYMaps(['Map', 'Placemark']);
 
   useEffect(() => {
     if (!ymaps || !mapRef.current) {
@@ -22,14 +22,14 @@ const MapElement = () => {
     map.geoObjects.add(placemark);
   }, [ymaps]);
 
-  return ymaps ? <div ref={mapRef} id={"map"} /> : <LoadingElement />;
+  return ymaps ? <div ref={mapRef} id={'map'} /> : <LoadingElement />;
 };
 const MapComponent = () => {
   return (
     <>
       <YMaps
         query={{
-          load: "package.full",
+          load: 'package.full',
           apikey: MAP_API_KEY,
         }}
       >

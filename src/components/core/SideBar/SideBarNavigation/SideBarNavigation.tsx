@@ -1,12 +1,12 @@
-import SideBarNavElement from "./SideBarNavElement";
-import { SideBarDropdownMenu } from "../SideBarDropdownMenu";
-import { sideNavData } from "data/sideBarNav";
-import { Fragment } from "react";
+import SideBarNavElement from './SideBarNavElement';
+import { SideBarDropdownMenu } from '../SideBarDropdownMenu';
+import { sideNavData } from 'data/sideBarNav';
+import { Fragment } from 'react';
 export const SideBarNavigation = () => {
   return (
     <>
       <aside className="row bg-white g-1 ps-4 pe-4 pt-3 pb-3 mb-4">
-        <SideBarDropdownMenu title={"Navigation"}>
+        <SideBarDropdownMenu title={'Navigation'}>
           <ul className="nav flex-column">
             {sideNavData.map((element, i) => (
               <Fragment key={i}>

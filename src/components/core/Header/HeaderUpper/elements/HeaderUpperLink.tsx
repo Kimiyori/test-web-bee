@@ -1,20 +1,15 @@
-import { ActiveButtonrContext } from "components/shared/UI/Header";
-import { useHover } from "hooks/hover";
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import { TNavLink } from "utils/types";
+import { ActiveButtonrContext } from 'components/shared/UI/Header';
+import { useHover } from 'hooks/UseHover';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { TNavLink } from 'utils/types';
 
-export const HeaderUpperLink = ({ url = "/", img, name }: TNavLink) => {
+export const HeaderUpperLink = ({ url = '/', img, name }: TNavLink) => {
   const { isHover, changeHoverState } = useHover();
   const { activeButton } = useContext(ActiveButtonrContext);
   return (
     <li
-      className={
-        "nav-item text-center" +
-        (activeButton === url || isHover
-          ? " bg-body-secondary bg-opacity-50"
-          : "")
-      }
+      className={'nav-item text-center' + (activeButton === url || isHover ? ' bg-body-secondary bg-opacity-50' : '')}
       onMouseEnter={changeHoverState}
       onMouseLeave={changeHoverState}
     >

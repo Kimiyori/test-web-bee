@@ -1,23 +1,24 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ActivityPage from "./pages/resume.page";
-import Map from "./pages/map.page";
-import Time from "./pages/time.page";
-import { TimerProvider } from "./context/timerContext";
-import MainLayout from "./components/shared/UI/MainLayout";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ActivityPage from './pages/Resume';
+import Map from './pages/Map';
+import Time from './pages/Time';
+import { TimerProvider } from './context/TimerContext';
+import MainLayout from './components/shared/UI/MainLayout';
+import { routes } from 'utils/routes';
 function App() {
   return (
     <>
-      <TimerProvider>
-        <Router>
+      <Router>
+        <TimerProvider>
           <Routes>
-            <Route path="/" element={<MainLayout />}>
+            <Route path={routes.resume} element={<MainLayout />}>
               <Route index element={<ActivityPage />} />
-              <Route path="/map" element={<Map />} />
-              <Route path="/time" element={<Time />} />
+              <Route path={routes.map} element={<Map />} />
+              <Route path={routes.time} element={<Time />} />
             </Route>
           </Routes>
-        </Router>
-      </TimerProvider>
+        </TimerProvider>
+      </Router>
     </>
   );
 }

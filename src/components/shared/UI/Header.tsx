@@ -1,7 +1,7 @@
-import { UpperHeader } from "../../core/Header/HeaderUpper/HeaderUpper";
-import { BottomHeader } from "../../core/Header/HeaderBottom/HeaderBottom";
-import { useLocation } from "react-router-dom";
-import { createContext, useEffect, useState } from "react";
+import { UpperHeader } from '../../core/Header/HeaderUpper/HeaderUpper';
+import { BottomHeader } from '../../core/Header/HeaderBottom/HeaderBottom';
+import { useLocation } from 'react-router-dom';
+import { createContext, useEffect, useState } from 'react';
 
 type TActiveButton = {
   activeButton?: string;

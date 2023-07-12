@@ -1,5 +1,5 @@
-import { HeaderBottomLink } from "./HeaderBottomLink";
-import { bottomLeftHeader } from "data/header";
+import { HeaderBottomLink } from './HeaderBottomLink';
+import { bottomLeftHeader } from 'data/header';
 
 const HeaderBottomLeftNav = () => {
   return (

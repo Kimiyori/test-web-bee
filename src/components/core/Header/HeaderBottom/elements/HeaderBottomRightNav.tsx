@@ -1,6 +1,6 @@
-import { HeaderBottomLink } from "./HeaderBottomLink";
-import HeaderBottomSettings from "./HeaderBottomSettings";
-import { bottomRightHeader } from "data/header";
+import { HeaderBottomLink } from './HeaderBottomLink';
+import HeaderBottomSettings from './HeaderBottomSettings';
+import { bottomRightHeader } from 'data/header';
 
 const HeaderBottomRightNav = () => {
   return (
@@ -13,7 +13,7 @@ const HeaderBottomRightNav = () => {
           name={element.name}
         />
       ))}
-      <HeaderBottomSettings url={"/settings"} />
+      <HeaderBottomSettings url={'/settings'} />
     </ul>
   );
 };
