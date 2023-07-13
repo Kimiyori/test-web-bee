@@ -7,19 +7,20 @@ import Photo from '../assets//icons/header/Photo.svg';
 import Statistics from '../assets/icons/header/Statistics.svg';
 import Invoices from '../assets/icons/header/Invoices.svg';
 import Schedule from '../assets/icons/header/Schedule.svg';
+import { routes } from 'utils/routes';
 export const bottomLeftHeader = [
   {
-    url: '/',
+    url: routes.resume.pathname,
     img: { image: Resume, altName: 'Resume' },
     name: 'Resume',
   },
   {
-    url: '/map',
+    url: routes.map.pathname,
     img: { image: Map, altName: 'Map' },
     name: 'Map',
   },
   {
-    url: '/time',
+    url: routes.time.pathname,
     img: { image: Time, altName: 'Time' },
     name: 'Time',
   },

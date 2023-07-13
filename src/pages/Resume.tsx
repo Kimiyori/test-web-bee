@@ -2,7 +2,6 @@ import { AddressElement } from '../components/core/AddressElement/AddressElement
 import { ArticleWrapper } from '../components/core/ArticleWrapper/ArticleWrapper';
 import ResumeImage from '../assets/img/abstractimg.jpeg';
 import SkillList from '../components/core/SkillList/SkillList';
-import { usePageTitle } from '../hooks/UseTitle';
 import { UserSummary } from '../components/core/SideBar/SideBarUserInfo';
 import { SideBarNavigation } from '../components/core/SideBar/SideBarNavigation/SideBarNavigation';
 import { SideBarComments } from '../components/core/SideBar/SideBarComments';
@@ -10,7 +9,6 @@ import { addresses, skillsList } from 'data/resume';
 import { Fragment } from 'react';
 
 const ActivityPage = () => {
-  usePageTitle('Resume');
   return (
     <>
       <main className="bg-light m-lg-5 m-2">

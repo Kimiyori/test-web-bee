@@ -1,5 +1,14 @@
 export const routes = {
-  resume: '/',
-  map: '/map',
-  time: '/time',
+  resume: {
+    pathname: '/',
+    title: 'Resume',
+  },
+  map: {
+    pathname: '/map',
+    title: 'Map',
+  },
+  time: {
+    pathname: '/time',
+    title: 'Time',
+  },
 };

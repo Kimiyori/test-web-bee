@@ -1,8 +1,6 @@
 import { ElementWrapper } from '../components/shared/UI/WrapperBlock';
-import { usePageTitle } from '../hooks/UseTitle';
 import { useTimer } from 'hooks/UseTimer';
 const Time = () => {
-  usePageTitle('Time');
   const { totalTime, handleReset } = useTimer();
   return (
     <>
