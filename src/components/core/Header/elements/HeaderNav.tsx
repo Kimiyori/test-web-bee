@@ -3,7 +3,7 @@ import { bottomLeftHeader } from 'data/header';
 
 const HeaderNav = ({ navList, isVertical = false }: { navList: typeof bottomLeftHeader; isVertical?: boolean }) => {
   return (
-    <ul className="navbar-nav gap-3" aria-label="header-nav">
+    <ul className={'navbar-nav gap-3 flex-row  justify-content-start '} aria-label="header-nav">
       {navList.map((element, i) => (
         <HeaderLink
           isVertical={isVertical}

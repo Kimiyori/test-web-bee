@@ -5,7 +5,7 @@ import HeaderNav from './elements/HeaderNav';
 const ShowMenuButton = () => {
   return (
     <button
-      className="navbar-toggler  me-5"
+      className="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent1"
