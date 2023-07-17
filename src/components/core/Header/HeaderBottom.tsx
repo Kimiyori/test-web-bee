@@ -1,6 +1,6 @@
-import HeaderBottomNav from './elements/HeaderBottomNav';
 import { bottomLeftHeader, bottomRightHeader } from 'data/header';
 import { useLocation } from 'react-router-dom';
+import HeaderNav from './elements/HeaderNav';
 
 export const BottomHeader = () => {
   const location = useLocation();
@@ -34,9 +34,9 @@ export const BottomHeader = () => {
           className=" mx-5 collapse navbar-collapse mt-3 mt-lg-0 justify-content-between"
           id="navbarSupportedContent"
         >
-          <HeaderBottomNav navList={bottomLeftHeader} />
+          <HeaderNav navList={bottomLeftHeader} />
           <hr className="hr" />
-          <HeaderBottomNav navList={bottomRightHeader} />
+          <HeaderNav navList={bottomRightHeader} />
         </div>
       </section>
     </>

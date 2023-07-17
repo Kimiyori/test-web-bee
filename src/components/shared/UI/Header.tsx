@@ -1,15 +1,13 @@
-import { UpperHeader } from '../../core/Header/HeaderUpper/HeaderUpper';
-import { BottomHeader } from '../../core/Header/HeaderBottom/HeaderBottom';
-
+import { UpperHeader } from '../../core/Header/HeaderUpper';
+import { BottomHeader } from '../../core/Header/HeaderBottom';
 
 export const Header = () => {
-
   return (
     <>
-        <header>
-          <UpperHeader />
-          <BottomHeader />
-        </header>
+      <header>
+        <UpperHeader />
+        <BottomHeader />
+      </header>
     </>
   );
 };

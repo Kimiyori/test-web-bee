@@ -1,11 +1,12 @@
-import { HeaderBottomLink } from './HeaderBottomLink';
+import { HeaderLink } from './HeaderLink';
 import { bottomLeftHeader } from 'data/header';
 
-const HeaderBottomNav = ({ navList }: { navList: typeof bottomLeftHeader }) => {
+const HeaderNav = ({ navList, isVertical = false }: { navList: typeof bottomLeftHeader; isVertical?: boolean }) => {
   return (
     <ul className="navbar-nav gap-3" aria-label="header-nav">
       {navList.map((element, i) => (
-        <HeaderBottomLink
+        <HeaderLink
+          isVertical={isVertical}
           key={i}
           url={element.url}
           img={{ image: element.img.image, altName: element.img.altName }}
@@ -15,4 +16,4 @@ const HeaderBottomNav = ({ navList }: { navList: typeof bottomLeftHeader }) => {
     </ul>
   );
 };
-export default HeaderBottomNav;
+export default HeaderNav;
