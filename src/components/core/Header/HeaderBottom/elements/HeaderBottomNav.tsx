@@ -1,11 +1,10 @@
 import { HeaderBottomLink } from './HeaderBottomLink';
-import HeaderBottomSettings from './HeaderBottomSettings';
-import { bottomRightHeader } from 'data/header';
+import { bottomLeftHeader } from 'data/header';
 
-const HeaderBottomRightNav = () => {
+const HeaderBottomNav = ({ navList }: { navList: typeof bottomLeftHeader }) => {
   return (
     <ul className="navbar-nav gap-3" aria-label="header-nav">
-      {bottomRightHeader.map((element, i) => (
+      {navList.map((element, i) => (
         <HeaderBottomLink
           key={i}
           url={element.url}
@@ -13,8 +12,7 @@ const HeaderBottomRightNav = () => {
           name={element.name}
         />
       ))}
-      <HeaderBottomSettings url={'/settings'} />
     </ul>
   );
 };
-export default HeaderBottomRightNav;
+export default HeaderBottomNav;

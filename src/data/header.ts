@@ -7,6 +7,7 @@ import Photo from '../assets//icons/header/Photo.svg';
 import Statistics from '../assets/icons/header/Statistics.svg';
 import Invoices from '../assets/icons/header/Invoices.svg';
 import Schedule from '../assets/icons/header/Schedule.svg';
+import Settings from '../assets/icons/header/Settings.svg';
 import { routes } from 'utils/routes';
 export const bottomLeftHeader = [
   {
@@ -37,9 +38,14 @@ export const bottomRightHeader = [
     name: 'Friends',
   },
   {
-    url: '/friends',
+    url: '/photo',
     img: { image: Photo, altName: 'Photo' },
     name: 'Photo',
+  },
+  {
+    url: '/settings',
+    img: { image: Settings, altName: 'Settings' },
+    name: 'Settings',
   },
 ];
 export const upperHeader = [

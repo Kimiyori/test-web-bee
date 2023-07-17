@@ -21,14 +21,17 @@ const ShowMenuButton = () => {
 export const UpperHeader = () => {
   return (
     <>
-      <section id="upper-header" className="z-1 p-1 px-0 bg-light shadow-sm navbar navbar-expand-lg">
+      <section
+        id="upper-header"
+        className="z-1 p-1 px-0 bg-light shadow-sm navbar navbar-expand-lg"
+      >
         <figure className="fs-5  navbar-brand ms-5 m-0">
           <img src={Back} alt="Back" />
           <span className="ms-2 fw-light">User pages - Profile</span>
         </figure>
         <ShowMenuButton />
         <div className="collapse navbar-collapse  mt-lg-0" id="navbarSupportedContent1">
-          <ul className="navbar-nav justify-content-end gap-4 me-5 pe-3 ms-auto flex-row" aria-label="upper-nav">
+          <ul className="navbar-nav  gap-4 me-5 pe-3 ms-auto flex-row justify-content-end" aria-label="upper-nav">
             {upperHeader.map((element, i) => (
               <HeaderUpperLink
                 key={i}

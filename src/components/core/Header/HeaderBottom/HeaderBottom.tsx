@@ -1,14 +1,13 @@
-import { useContext } from 'react';
-import HeaderBottomLeftNav from './elements/HeaderBottomLeftNav';
-import HeaderBottomRightNav from './elements/HeaderBottomRightNav';
-import { ActiveButtonrContext } from 'components/shared/UI/Header';
+import HeaderBottomNav from './elements/HeaderBottomNav';
+import { bottomLeftHeader, bottomRightHeader } from 'data/header';
+import { useLocation } from 'react-router-dom';
 
 export const BottomHeader = () => {
-  const { activeButton } = useContext(ActiveButtonrContext);
+  const location = useLocation();
   return (
     <>
       <section id="bottom-header" className="navbar navbar-expand-lg bg-white shadow-sm fs-6 py-lg-0">
-        {activeButton === '/' && (
+        {location.pathname === '/' && (
           <button
             className="btn d-lg-none bg-body-secondary bg-opacity-50 ms-5"
             type="button"
@@ -35,9 +34,9 @@ export const BottomHeader = () => {
           className=" mx-5 collapse navbar-collapse mt-3 mt-lg-0 justify-content-between"
           id="navbarSupportedContent"
         >
-          <HeaderBottomLeftNav />
+          <HeaderBottomNav navList={bottomLeftHeader} />
           <hr className="hr" />
-          <HeaderBottomRightNav />
+          <HeaderBottomNav navList={bottomRightHeader} />
         </div>
       </section>
     </>
