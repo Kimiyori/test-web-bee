@@ -3,7 +3,7 @@ import ActivityPage from './pages/Resume';
 import Map from './pages/Map';
 import Time from './pages/Time';
 import MainLayout from './components/shared/UI/MainLayout';
-import { routes } from 'utils/routes';
+import { routes } from 'data/routes';
 import { usePageTitle } from 'hooks/UseTitle';
 
 function App() {

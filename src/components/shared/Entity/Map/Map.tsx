@@ -1,7 +1,7 @@
 import { YMaps, useYMaps } from '@pbe/react-yandex-maps';
-import LoadingElement from 'components/core/LoadingElement/LoadingElement';
+import { LoadingElement } from 'components/core/LoadingElement/LoadingElement';
 import { MAP_API_KEY, mapData } from 'data/map';
-import { useEffect, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 
 const MapElement = () => {
   const mapRef = useRef(null);
@@ -24,7 +24,7 @@ const MapElement = () => {
 
   return ymaps ? <div ref={mapRef} id={'map'} /> : <LoadingElement />;
 };
-const MapComponent = () => {
+const MapComponent:FC = () => {
   return (
     <>
       <YMaps

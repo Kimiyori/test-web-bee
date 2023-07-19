@@ -1,17 +1,9 @@
 import { useHover } from 'hooks/UseHover';
+import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { NavLinkProps } from 'utils/types';
 
-export const HeaderLink = ({
-  url,
-  img,
-  name,
-  isVertical = false,
-}: {
-  url: string;
-  img: { image: string; altName: string };
-  name: string;
-  isVertical?: boolean;
-}) => {
+export const HeaderLink: FC<NavLinkProps & { isVertical?: boolean }> = ({ url, icon, name, isVertical = false }) => {
   const { isHover, changeHoverState } = useHover();
   const location = useLocation();
   return (
@@ -24,7 +16,7 @@ export const HeaderLink = ({
       onMouseLeave={changeHoverState}
     >
       <Link to={url} className="container text-decoration-none text-black fw-light">
-        <img src={img.image} alt={img.altName} className="align-middle" />
+        <icon.src className="align-middle" title={icon.title} />
         <span className={`${isVertical ? 'd-block' : ''} mb-0 mt-1 fw-light align-middle`}> {name}</span>
       </Link>
     </li>

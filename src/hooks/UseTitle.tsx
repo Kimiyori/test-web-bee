@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { routes } from 'utils/routes';
+import { routes } from 'data/routes';
 
 export const usePageTitle = () => {
   const location = useLocation();

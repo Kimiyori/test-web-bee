@@ -1,7 +1,7 @@
 import { AddressElement } from '../components/core/AddressElement/AddressElement';
 import { ArticleWrapper } from '../components/core/ArticleWrapper/ArticleWrapper';
 import ResumeImage from '../assets/img/abstractimg.jpeg';
-import SkillList from '../components/core/SkillList/SkillList';
+import { SkillList } from '../components/core/SkillList/SkillList';
 import { UserSummary } from '../components/core/SideBar/SideBarUserInfo';
 import { SideBarNavigation } from '../components/core/SideBar/SideBarNavigation/SideBarNavigation';
 import { SideBarComments } from '../components/core/SideBar/SideBarComments';
@@ -24,15 +24,7 @@ const ActivityPage = () => {
               <hr className="solid" />
               <address className="d-flex flex-column flex-sm-row gap-4 justify-content-evenly mb-0">
                 {addresses.map((address, i) => (
-                  <AddressElement
-                    key={i}
-                    name={address.name}
-                    url={address.url}
-                    img={{
-                      src: address.img.src,
-                      alt: address.img.alt,
-                    }}
-                  />
+                  <AddressElement key={i} name={address.name} url={address.url} icon={address.icon} />
                 ))}
               </address>
             </ArticleWrapper>

@@ -1,13 +1,12 @@
-import Dropdown from '../../../assets/icons/common/Dropdown.svg';
-import Reload from '../../../assets/icons/common/Reload.svg';
-import Close from '../../../assets/icons/common/Close.svg';
-import { FC, useReducer } from 'react';
-type Props = {
+import { ReactComponent as Dropdown } from '../../../assets/icons/common/Dropdown.svg';
+import { ReactComponent as Reload } from '../../../assets/icons/common/Reload.svg';
+import { ReactComponent as Close } from '../../../assets/icons/common/Close.svg';
+import { FC, PropsWithChildren, useReducer } from 'react';
+type ElementWrapperProps = {
   name: string;
   reload: () => void;
-  children?: JSX.Element | JSX.Element[];
 };
-export const ElementWrapper: FC<Props> = ({ name, reload, children }) => {
+export const ElementWrapper: FC<ElementWrapperProps & PropsWithChildren> = ({ name, reload, children }) => {
   const [dropdown, toggle] = useReducer((checked) => !checked, true);
   const [show, changeVisibility] = useReducer((checked) => !checked, true);
 
@@ -26,13 +25,13 @@ export const ElementWrapper: FC<Props> = ({ name, reload, children }) => {
             <h4 className="fs-4 col justify-content-start fw-normal">{name}</h4>
             <ul className="col justify-content-end nav gap-3">
               <li className="nav-item p-1" onClick={toggle}>
-                <img src={Dropdown} alt="Dropdown" />
+                <Dropdown title="Dropdown" />
               </li>
               <li className="nav-item p-1" onClick={reload}>
-                <img src={Reload} alt="Reload" />
+                <Reload title="Reload" />
               </li>
               <li className="nav-item p-1" onClick={changeVisibility}>
-                <img src={Close} alt="Close" />
+                <Close title="Close" />
               </li>
             </ul>
           </div>

@@ -1,4 +1,4 @@
-import SideBarNavElement from './SideBarNavElement';
+import { SideBarNavElement } from './SideBarNavElement';
 import { SideBarDropdownMenu } from '../SideBarDropdownMenu';
 import { sideNavData } from 'data/sideBarNav';
 import { Fragment } from 'react';
@@ -11,14 +11,7 @@ export const SideBarNavigation = () => {
             {sideNavData.map((element, i) => (
               <Fragment key={i}>
                 {i === 4 && <hr className="solid" />}
-                <SideBarNavElement
-                  url={element.url}
-                  img={{
-                    image: element.img.image,
-                    altName: element.img.altName,
-                  }}
-                  name={element.name}
-                />
+                <SideBarNavElement url={element.url} icon={element.icon} name={element.name} />
               </Fragment>
             ))}
           </ul>

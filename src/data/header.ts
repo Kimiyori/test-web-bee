@@ -1,67 +1,68 @@
-import Resume from '../assets//icons/header/Resume.svg';
-import Map from '../assets//icons/header/Map.svg';
-import Time from '../assets//icons/header/Time.svg';
-import Notes from '../assets//icons/header/Notes.svg';
-import Friends from '../assets//icons/header/Friends.svg';
-import Photo from '../assets//icons/header/Photo.svg';
-import Statistics from '../assets/icons/header/Statistics.svg';
-import Invoices from '../assets/icons/header/Invoices.svg';
-import Schedule from '../assets/icons/header/Schedule.svg';
-import Settings from '../assets/icons/header/Settings.svg';
-import { routes } from 'utils/routes';
-export const bottomLeftHeader = [
+import { ReactComponent as Resume } from '../assets//icons/header/Resume.svg';
+import { ReactComponent as Map } from '../assets//icons/header/Map.svg';
+import { ReactComponent as Time } from '../assets//icons/header/Time.svg';
+import { ReactComponent as Notes } from '../assets//icons/header/Notes.svg';
+import { ReactComponent as Friends } from '../assets//icons/header/Friends.svg';
+import { ReactComponent as Photo } from '../assets//icons/header/Photo.svg';
+import { ReactComponent as Statistics } from '../assets/icons/header/Statistics.svg';
+import { ReactComponent as Invoices } from '../assets/icons/header/Invoices.svg';
+import { ReactComponent as Schedule } from '../assets/icons/header/Schedule.svg';
+import { ReactComponent as Settings } from '../assets/icons/header/Settings.svg';
+import { routes } from 'data/routes';
+import { NavLinkProps } from 'utils/types';
+export const bottomLeftHeader: NavLinkProps[] = [
   {
     url: routes.resume.pathname,
-    img: { image: Resume, altName: 'Resume' },
+    icon: { src: Resume, title: 'Resume' },
     name: 'Resume',
   },
   {
     url: routes.map.pathname,
-    img: { image: Map, altName: 'Map' },
+    icon: { src: Map, title: 'Map' },
     name: 'Map',
   },
   {
     url: routes.time.pathname,
-    img: { image: Time, altName: 'Time' },
+    icon: { src: Time, title: 'Time' },
     name: 'Time',
   },
 ];
-export const bottomRightHeader = [
+export const bottomRightHeader: NavLinkProps[] = [
   {
     url: '/notes',
-    img: { image: Notes, altName: 'Notes' },
+    icon: { src: Notes, title: 'Notes' },
     name: 'Notes',
   },
   {
     url: '/friends',
-    img: { image: Friends, altName: 'Friends' },
+    icon: { src: Friends, title: 'Friends' },
     name: 'Friends',
   },
   {
     url: '/photo',
-    img: { image: Photo, altName: 'Photo' },
+    icon: { src: Photo, title: 'Photo' },
     name: 'Photo',
   },
   {
     url: '/settings',
-    img: { image: Settings, altName: 'Settings' },
+    icon: { src: Settings, title: 'Settings' },
     name: 'Settings',
   },
 ];
-export const upperHeader = [
+export const upperHeader: NavLinkProps[] = [
   {
     url: '/statistics',
-    img: { image: Statistics, altName: 'Statistics' },
+    icon: { src: Statistics, title: 'Statistics' },
     name: 'Statistics',
   },
   {
     url: '/invoices',
-    img: { image: Invoices, altName: 'Invoices' },
+    icon: { src: Invoices, title: 'Invoices' },
     name: 'Invoices',
   },
   {
     url: '/schedule',
-    img: { image: Schedule, altName: 'Schedule' },
+    icon: { src: Schedule, title: 'Schedule' },
     name: 'Schedule',
   },
 ];
