@@ -8,21 +8,21 @@ import { ReactComponent as Statistics } from '../assets/icons/header/Statistics.
 import { ReactComponent as Invoices } from '../assets/icons/header/Invoices.svg';
 import { ReactComponent as Schedule } from '../assets/icons/header/Schedule.svg';
 import { ReactComponent as Settings } from '../assets/icons/header/Settings.svg';
-import { routes } from 'data/routes';
+import { routes } from 'data/PagesData';
 import { NavLinkProps } from 'utils/types';
 export const bottomLeftHeader: NavLinkProps[] = [
   {
-    url: routes.resume.pathname,
+    url: routes[0].pathname,
     icon: { src: Resume, title: 'Resume' },
     name: 'Resume',
   },
   {
-    url: routes.map.pathname,
+    url: routes[1].pathname,
     icon: { src: Map, title: 'Map' },
     name: 'Map',
   },
   {
-    url: routes.time.pathname,
+    url: routes[2].pathname,
     icon: { src: Time, title: 'Time' },
     name: 'Time',
   },
