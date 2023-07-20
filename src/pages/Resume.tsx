@@ -1,5 +1,4 @@
 import { AddressElement } from '../components/core/AddressElement/AddressElement';
-import { ArticleWrapper } from '../components/core/ArticleWrapper/ArticleWrapper';
 import ResumeImage from '../assets/img/abstractimg.jpeg';
 import { SkillList } from '../components/core/SkillList/SkillList';
 import { UserSummary } from '../components/core/SideBar/SideBarUserInfo';
@@ -14,7 +13,7 @@ const ActivityPage = () => {
       <main className="bg-light m-lg-5 m-2">
         <div className="row">
           <section className="col d-flex flex-column gap-4 h-100">
-            <ArticleWrapper>
+            <article className="bg-white p-4">
               <div className="position-relative">
                 <img src={ResumeImage} className="w-100 object-fit-cover" alt="Resume" />
                 <h6 className="position-absolute top-50 start-50 translate-middle text-white w-100 bg-body-secondary bg-opacity-50 text-center">
@@ -27,8 +26,8 @@ const ActivityPage = () => {
                   <AddressElement key={i} name={address.name} url={address.url} icon={address.icon} />
                 ))}
               </address>
-            </ArticleWrapper>
-            <ArticleWrapper>
+            </article>
+            <article className="bg-white p-4">
               <h2 className="mb-4 bg-body-secondary p-2">Skills</h2>
               {skillsList.map((element, i) => (
                 <Fragment key={i}>
@@ -36,7 +35,7 @@ const ActivityPage = () => {
                   <SkillList title={element.title} skills={element.skills} />
                 </Fragment>
               ))}
-            </ArticleWrapper>
+            </article>
           </section>
           <div
             className="col-2 offcanvas-lg offcanvas-end bg-light"
