@@ -6,8 +6,8 @@ import { ReactComponent as Friends } from '../assets//icons/header/Friends.svg';
 import { ReactComponent as Photo } from '../assets//icons/header/Photo.svg';
 import { ReactComponent as Statistics } from '../assets/icons/header/Statistics.svg';
 import { ReactComponent as Invoices } from '../assets/icons/header/Invoices.svg';
-import { ReactComponent as Schedule } from '../assets/icons/header/Schedule.svg';
-import { ReactComponent as Settings } from '../assets/icons/header/Settings.svg';
+import { ReactComponent as Schedule } from 'assets/icons/header/Schedule.svg';
+import { ReactComponent as Settings } from 'assets/icons/header/Settings.svg';
 import { routes } from 'data/PagesData';
 import { NavLinkProps } from 'utils/types';
 export const bottomLeftHeader: NavLinkProps[] = [

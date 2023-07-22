@@ -1,10 +1,10 @@
-import UserAvatar from '../../../assets/img/user-avatar.png';
-import { ReactComponent as Telegram } from '../../../assets/icons/resume/nav/Telegram.svg';
-import { ReactComponent as GitHub } from '../../../assets/icons/resume/nav/Github.svg';
-import { ReactComponent as Twitter } from '../../../assets/icons/resume/nav/Twitter.svg';
+import UserAvatar from 'assets/img/user-avatar.png';
+import { ReactComponent as Telegram } from 'assets/icons/resume/nav/Telegram.svg';
+import { ReactComponent as GitHub } from 'assets/icons/resume/nav/Github.svg';
+import { ReactComponent as Twitter } from 'assets/icons/resume/nav/Twitter.svg';
 import { FC } from 'react';
 
-export const UserSummary: FC = () => {
+const UserSummary: FC = () => {
   return (
     <aside className="row bg-white text-center mb-4 py-3 px-4 g-1 justify-content-center">
       <img className="rounded-circle mb-3 object-fit-cover img-fluid w-75" src={UserAvatar} alt="User avatar" />
@@ -24,3 +24,4 @@ export const UserSummary: FC = () => {
     </aside>
   );
 };
+export default UserSummary;

@@ -1,9 +1,9 @@
 import { bottomLeftHeader, bottomRightHeader } from 'data/header';
 import { useLocation } from 'react-router-dom';
-import { HeaderNav } from './elements/HeaderNav';
+import HeaderNav from 'components/core/Header/elements/HeaderNav';
 import { FC } from 'react';
 
-export const BottomHeader:FC = () => {
+const BottomHeader: FC = () => {
   const location = useLocation();
   return (
     <section id="bottom-header" className="navbar navbar-expand-lg bg-white shadow-sm fs-6 py-lg-0">
@@ -38,3 +38,4 @@ export const BottomHeader:FC = () => {
     </section>
   );
 };
+export default BottomHeader;

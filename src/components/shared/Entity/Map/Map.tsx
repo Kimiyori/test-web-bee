@@ -1,6 +1,6 @@
 import { YMaps, useYMaps } from '@pbe/react-yandex-maps';
-import { LoadingElement } from 'components/core/LoadingElement/LoadingElement';
-import { MAP_API_KEY, mapData } from 'data/map';
+import LoadingElement from 'components/core/LoadingElement/LoadingElement';
+import { mapData } from 'data/map';
 import { FC, useEffect, useRef } from 'react';
 
 const MapElement = () => {
@@ -22,15 +22,15 @@ const MapElement = () => {
     map.geoObjects.add(placemark);
   }, [ymaps]);
 
-  return ymaps ? <div ref={mapRef} id={'map'} /> : <LoadingElement />;
+  return ymaps ? <div ref={mapRef} id="map" /> : <LoadingElement />;
 };
-const MapComponent:FC = () => {
+const MapComponent: FC = () => {
   return (
     <>
       <YMaps
         query={{
           load: 'package.full',
-          apikey: MAP_API_KEY,
+          apikey: process.env.REACT_APP_MAP_API_KEY,
         }}
       >
         <MapElement />

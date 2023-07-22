@@ -1,12 +1,12 @@
-import { ReactComponent as Dropdown } from '../../../assets/icons/common/Dropdown.svg';
-import { ReactComponent as Reload } from '../../../assets/icons/common/Reload.svg';
-import { ReactComponent as Close } from '../../../assets/icons/common/Close.svg';
+import { ReactComponent as Dropdown } from 'assets/icons/common/Dropdown.svg';
+import { ReactComponent as Reload } from 'assets/icons/common/Reload.svg';
+import { ReactComponent as Close } from 'assets/icons/common/Close.svg';
 import { FC, PropsWithChildren, useReducer } from 'react';
 type ElementWrapperProps = {
   name: string;
-  reload: () => void;
+  onReload: () => void;
 };
-export const ElementWrapper: FC<ElementWrapperProps & PropsWithChildren> = ({ name, reload, children }) => {
+const ElementWrapper: FC<ElementWrapperProps & PropsWithChildren> = ({ name, onReload, children }) => {
   const [dropdown, toggle] = useReducer((checked) => !checked, true);
   const [show, changeVisibility] = useReducer((checked) => !checked, true);
 
@@ -27,7 +27,7 @@ export const ElementWrapper: FC<ElementWrapperProps & PropsWithChildren> = ({ na
               <li className="nav-item p-1" onClick={toggle}>
                 <Dropdown title="Dropdown" />
               </li>
-              <li className="nav-item p-1" onClick={reload}>
+              <li className="nav-item p-1" onClick={onReload}>
                 <Reload title="Reload" />
               </li>
               <li className="nav-item p-1" onClick={changeVisibility}>
@@ -41,3 +41,4 @@ export const ElementWrapper: FC<ElementWrapperProps & PropsWithChildren> = ({ na
     </>
   );
 };
+export default ElementWrapper;

@@ -1,8 +1,8 @@
-import { useHover } from 'hooks/UseHover';
+import useHover from 'hooks/UseHover';
 import { Link } from 'react-router-dom';
 import { NavLinkProps } from 'utils/types';
 
-export const SideBarNavElement = ({ url, icon, name }: NavLinkProps) => {
+const SideBarNavElement = ({ url, icon, name }: NavLinkProps) => {
   const { isHover, changeHoverState } = useHover();
   return (
     <li
@@ -17,3 +17,4 @@ export const SideBarNavElement = ({ url, icon, name }: NavLinkProps) => {
     </li>
   );
 };
+export default SideBarNavElement;

@@ -1,9 +1,9 @@
-import { AddressElement } from '../components/core/AddressElement/AddressElement';
-import ResumeImage from '../assets/img/abstractimg.jpeg';
-import { SkillList } from '../components/core/SkillList/SkillList';
-import { UserSummary } from '../components/core/SideBar/SideBarUserInfo';
-import { SideBarNavigation } from '../components/core/SideBar/SideBarNavigation/SideBarNavigation';
-import { SideBarComments } from '../components/core/SideBar/SideBarComments';
+import AddressElement from 'components/core/AddressElement/AddressElement';
+import ResumeImage from 'assets/img/abstractimg.jpeg';
+import SkillList from 'components/core/SkillList/SkillList';
+import UserSummary from 'components/core/SideBar/SideBarUserInfo';
+import SideBarNavigation from 'components/core/SideBar/SideBarNavigation/SideBarNavigation';
+import SideBarComments from 'components/core/SideBar/SideBarComments';
 import { addresses, skillsList } from 'data/resume';
 import { Fragment } from 'react';
 
@@ -22,15 +22,15 @@ const ActivityPage = () => {
               </div>
               <hr className="solid" />
               <address className="d-flex flex-column flex-sm-row gap-4 justify-content-evenly mb-0">
-                {addresses.map((address, i) => (
-                  <AddressElement key={i} name={address.name} url={address.url} icon={address.icon} />
+                {addresses.map((address) => (
+                  <AddressElement key={address.name} name={address.name} url={address.url} icon={address.icon} />
                 ))}
               </address>
             </article>
             <article className="bg-white p-4">
               <h2 className="mb-4 bg-body-secondary p-2">Skills</h2>
-              {skillsList.map((element, i) => (
-                <Fragment key={i}>
+              {skillsList.map((element) => (
+                <Fragment key={element.title}>
                   <hr className="solid" />
                   <SkillList title={element.title} skills={element.skills} />
                 </Fragment>

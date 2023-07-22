@@ -1,9 +1,9 @@
-import { useHover } from 'hooks/UseHover';
+import useHover from 'hooks/UseHover';
 import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NavLinkProps } from 'utils/types';
 
-export const HeaderLink: FC<NavLinkProps & { isVertical?: boolean }> = ({ url, icon, name, isVertical = false }) => {
+const HeaderLink: FC<NavLinkProps & { isVertical?: boolean }> = ({ url, icon, name, isVertical = false }) => {
   const { isHover, changeHoverState } = useHover();
   const location = useLocation();
   return (
@@ -22,3 +22,4 @@ export const HeaderLink: FC<NavLinkProps & { isVertical?: boolean }> = ({ url, i
     </li>
   );
 };
+export default HeaderLink;

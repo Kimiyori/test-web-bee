@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { NavLinkProps } from 'utils/types';
 
-export const AddressElement: FC<NavLinkProps> = ({ name, url, icon }: NavLinkProps) => {
+const AddressElement: FC<NavLinkProps> = ({ name, url, icon }: NavLinkProps) => {
   return (
     <div className="d-flex flex-column align-items-center gap-3">
       <a className="text-decoration-none text-black d-flex flex-column align-items-center gap-3" href={url}>
@@ -11,3 +11,4 @@ export const AddressElement: FC<NavLinkProps> = ({ name, url, icon }: NavLinkPro
     </div>
   );
 };
+export default AddressElement;

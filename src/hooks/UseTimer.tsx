@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { buildTimeStr, getTime } from 'utils/timer';
-import useIsTabActive from './UseVisible';
+import useIsTabActive from 'hooks/UseIsTabActive';
 
 let initialTime = Date.now();
 
-export const useTimer = () => {
+const useTimer = () => {
   const isVisible = useIsTabActive();
   const [timer, setTimer] = useState(getTime(initialTime));
   const countRef = useRef<ReturnType<typeof setTimeout> | undefined>();
@@ -28,3 +28,4 @@ export const useTimer = () => {
   const totalTime = buildTimeStr(timer);
   return { totalTime, handleReset };
 };
+export default useTimer;

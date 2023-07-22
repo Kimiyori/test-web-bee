@@ -1,6 +1,6 @@
-import { ReactComponent as Email } from '../assets/icons/resume/contact/Email.svg';
-import { ReactComponent as Phone } from '../assets/icons/resume/contact/Phone.svg';
-import { ReactComponent as City } from '../assets/icons/resume/contact/City.svg';
+import { ReactComponent as Email } from 'assets/icons/resume/contact/Email.svg';
+import { ReactComponent as Phone } from 'assets/icons/resume/contact/Phone.svg';
+import { ReactComponent as City } from 'assets/icons/resume/contact/City.svg';
 import { NavLinkProps } from 'utils/types';
 export const skillsList = [
   {

@@ -1,7 +1,7 @@
 import { routes } from 'data/PagesData';
 import { Route, Routes } from 'react-router-dom';
 import { routerType } from 'utils/types';
-import { usePageTitle } from 'hooks/UseTitle';
+import usePageTitle from 'hooks/UsePageTitle';
 import MainLayout from 'components/shared/UI/MainLayout';
 const Router = () => {
   usePageTitle();

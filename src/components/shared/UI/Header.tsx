@@ -1,8 +1,8 @@
-import { UpperHeader } from '../../core/Header/HeaderUpper';
-import { BottomHeader } from '../../core/Header/HeaderBottom';
+import UpperHeader from 'components/core/Header/HeaderUpper';
+import BottomHeader from 'components/core/Header/HeaderBottom';
 import { FC } from 'react';
 
-export const Header:FC = () => {
+const Header: FC = () => {
   return (
     <>
       <header>
@@ -12,3 +12,4 @@ export const Header:FC = () => {
     </>
   );
 };
+export default Header;

@@ -1,6 +1,6 @@
 import { upperHeader } from 'data/header';
-import { ReactComponent as Back } from '../../../assets/icons/header/Back.svg';
-import { HeaderNav } from './elements/HeaderNav';
+import { ReactComponent as Back } from 'assets/icons/header/Back.svg';
+import HeaderNav from 'components/core/Header/elements/HeaderNav';
 
 const ShowMenuButton = () => {
   return (
@@ -18,11 +18,11 @@ const ShowMenuButton = () => {
   );
 };
 
-export const UpperHeader = () => {
+const UpperHeader = () => {
   return (
     <section id="upper-header" className="z-1 p-1 px-0 bg-light navbar navbar-expand-lg  justify-content-between mx-5">
       <figure className="fs-5  navbar-brand  m-0">
-        <Back title={'back'} />
+        <Back title="back" />
         <span className="ms-2 fw-light">User pages - Profile</span>
       </figure>
       <ShowMenuButton />
@@ -32,3 +32,4 @@ export const UpperHeader = () => {
     </section>
   );
 };
+export default UpperHeader;

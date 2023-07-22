@@ -1,12 +1,13 @@
 import { FC } from 'react';
-import { HeaderLink } from './HeaderLink';
+import HeaderLink from 'components/core/Header/elements/HeaderLink';
 import { NavLinkProps } from 'utils/types';
-export const HeaderNav: FC<{ navList: NavLinkProps[]; isVertical?: boolean }> = ({ navList, isVertical = false }) => {
+const HeaderNav: FC<{ navList: NavLinkProps[]; isVertical?: boolean }> = ({ navList, isVertical = false }) => {
   return (
     <ul className={'navbar-nav gap-3 flex-row  justify-content-start '} aria-label="header-nav">
-      {navList.map((element, i) => (
-        <HeaderLink isVertical={isVertical} key={i} url={element.url} icon={element.icon} name={element.name} />
+      {navList.map((element) => (
+        <HeaderLink isVertical={isVertical} key={element.name} {...element} />
       ))}
     </ul>
   );
 };
+export default HeaderNav;
