@@ -4,12 +4,10 @@ import { FC } from 'react';
 
 const Header: FC = () => {
   return (
-    <>
-      <header>
-        <UpperHeader />
-        <BottomHeader />
-      </header>
-    </>
+    <header>
+      <UpperHeader />
+      <BottomHeader />
+    </header>
   );
 };
 export default Header;

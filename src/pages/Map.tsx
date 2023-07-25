@@ -8,13 +8,11 @@ const Map = () => {
     setSeed(Math.random());
   };
   return (
-    <>
-      <ElementWrapper name="Yandex Map" onReload={reset}>
-        <div className="position-relative d-flex justify-content-center align-items-center w-100 " id="map" key={seed}>
-          <MapComponent />
-        </div>
-      </ElementWrapper>
-    </>
+    <ElementWrapper name="Yandex Map" onReload={reset}>
+      <div className="position-relative d-flex justify-content-center align-items-center w-100 " id="map" key={seed}>
+        <MapComponent />
+      </div>
+    </ElementWrapper>
   );
 };
 export default Map;

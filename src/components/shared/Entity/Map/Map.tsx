@@ -9,7 +9,7 @@ const MapElement = () => {
 
   useEffect(() => {
     if (!ymaps || !mapRef.current) {
-      return;
+      return ;
     }
     const map = new ymaps.Map(mapRef.current, {
       center: mapData.location,
@@ -21,12 +21,10 @@ const MapElement = () => {
     });
     map.geoObjects.add(placemark);
   }, [ymaps]);
-
   return ymaps ? <div ref={mapRef} id="map" /> : <LoadingElement />;
 };
 const MapComponent: FC = () => {
   return (
-    <>
       <YMaps
         query={{
           load: 'package.full',
@@ -35,7 +33,6 @@ const MapComponent: FC = () => {
       >
         <MapElement />
       </YMaps>
-    </>
   );
 };
 export default MapComponent;
