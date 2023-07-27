@@ -45,5 +45,5 @@ export const handleHoverButtons = () => {
 export const handleSideBarButton = () => {
   const location = window.location.pathname;
   const sideBarButton = document.querySelector('#sidebar-menu');
-  sideBarButton.hidden = location.endsWith('/') || location.endsWith('resume') ? false : true;
+  sideBarButton.hidden = !location.endsWith('/') && !location.endsWith('resume');
 };
