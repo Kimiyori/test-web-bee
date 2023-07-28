@@ -28,19 +28,19 @@ class Header extends HTMLElement {
       </button>
       <div class="collapse navbar-collapse mt-lg-0" id="navbarSupportedContent1">
          <ul class="navbar-nav justify-content-end gap-4 me-5 pe-3 ms-auto flex-row" aria-label="upper-nav">
-            <li class="nav-item text-center">
+            <li class="nav-item text-center link-hover">
                <a href="/stat" class="align-middle text-decoration-none text-black">
                   <img src="static/assets/icons/header/Statistics.svg" alt="Stat icon" />
                   <p class="mb-0 mt-1 fw-light">Statistics</p>
                </a>
             </li>
-            <li class="nav-item text-center">
+            <li class="nav-item text-center link-hover">
                <a href="/invoices" class="align-middle text-decoration-none text-black">
                   <img src="static/assets/icons/header/Invoices.svg" alt="Invoices icon" />
                   <p class="mb-0 mt-1 fw-light">Invoices</p>
                </a>
             </li>
-            <li class="nav-item text-center">
+            <li class="nav-item text-center link-hover">
                <a href="/schedule" class="align-middle text-decoration-none text-black">
                   <img src="static/assets/icons/header/Schedule.svg" alt="Schedule icon" />
                   <p class="mb-0 mt-1 fw-light">Schedule</p>
@@ -73,7 +73,7 @@ class Header extends HTMLElement {
       </button>
       <div class="ms-5 collapse navbar-collapse mt-3 mt-lg-0" id="navbarSupportedContent">
          <ul class=" navbar-nav gap-3 me-auto" aria-label="header-nav">
-            <li class="nav-item d-inline-flex align-items-center ">
+            <li class="nav-item d-inline-flex align-items-center  link-hover">
                <a
                   href="/"
                   data-bs-toggle="collapse"
@@ -86,7 +86,7 @@ class Header extends HTMLElement {
                <span class="align-middle">Resume</span>
                </a>
             </li>
-            <li class="nav-item d-inline-flex align-items-center">
+            <li class="nav-item d-inline-flex align-items-center link-hover">
                <a
                   href="/map"
                   data-bs-toggle="collapse"
@@ -99,7 +99,7 @@ class Header extends HTMLElement {
                <span class="align-middle">Map</span>
                </a>
             </li>
-            <li class="nav-item d-inline-flex align-items-center">
+            <li class="nav-item d-inline-flex align-items-center link-hover">
                <a
                   href="/time"
                   data-bs-toggle="collapse"
@@ -115,25 +115,25 @@ class Header extends HTMLElement {
          </ul>
          <hr class="hr" />
          <ul class="navbar-nav gap-1 me-5" aria-label="header-nav">
-            <li class="nav-item p-1 d-inline-flex align-items-center">
+            <li class="nav-item p-1 d-inline-flex align-items-center link-hover">
                <a href="/notes" class="container text-decoration-none text-black fw-light ms-0">
                <img src="static/assets/icons/header/Notes.svg" alt="Notes icon" />
                <span class="align-middle">Notes</span>
                </a>
             </li>
-            <li class="nav-item p-1 d-inline-flex align-items-center">
+            <li class="nav-item p-1 d-inline-flex align-items-center link-hover">
                <a href="/friends" class="container text-decoration-none text-black fw-light ms-0">
                <img src="static/assets/icons/header/Friends.svg" alt="Friends icon" />
                <span class="align-middle">Friends</span>
                </a>
             </li>
-            <li class="nav-item p-1 d-inline-flex align-items-center">
+            <li class="nav-item p-1 d-inline-flex align-items-center link-hover">
                <a href="/photos" class="container text-decoration-none text-black fw-light ms-0">
                <img src="static/assets/icons/header/Photo.svg" alt="Photo icon" />
                <span class="align-middle">Photos</span>
                </a>
             </li>
-            <li class="nav-item p-1 d-inline-flex align-items-center">
+            <li class="nav-item p-1 d-inline-flex align-items-center link-hover">
                <a href="/settings" class="container text-decoration-none text-black fw-light ms-0">
                <img src="static/assets/icons/header/Settings.svg" alt="Settings icon" />
                <span class="align-middle">Settings</span>

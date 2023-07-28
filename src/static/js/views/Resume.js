@@ -89,28 +89,28 @@ export default async function Resume() {
           </div>
       <ul class="nav flex-column drop-down" aria-label="side-nav">
         <hr class="solid mt-0" />
-        <li class="nav-item fs-6 mb-3">
+        <li class="nav-item fs-6 mb-3 link-hover">
           <a href="/profile" class="text-decoration-none text-black">
             <img src="static/assets/icons/resume/nav/MyProfile.svg" alt="MyProfile" />
             <span>My profile</span>
           </a>
         </li>
 
-        <li class="nav-item fs-6 mb-3">
+        <li class="nav-item fs-6 mb-3 link-hover">
           <a href="/balance" class="text-decoration-none text-black">
             <img src="static/assets/icons/resume/nav/Balance.svg" alt="Balance" />
             <span>Balance</span>
           </a>
         </li>
 
-        <li class="nav-item fs-6 mb-3">
+        <li class="nav-item fs-6 mb-3 link-hover">
           <a href="/conn" class="text-decoration-none text-black">
             <img src="static/assets/icons/resume/nav/Connections.svg" alt="Connections" />
             <span>Connections</span>
           </a>
         </li>
 
-        <li class="nav-item fs-6 mb-3">
+        <li class="nav-item fs-6 mb-3 link-hover">
           <a href="/friends" class="text-decoration-none text-black">
             <img src="static/assets/icons/resume/nav/FriendsNavigation.svg" alt="Friends" />
             <span>Friends</span>
@@ -123,14 +123,14 @@ export default async function Resume() {
           alt="Events"
           href="/events.html"
         ></side-nav-item>
-        <li class="nav-item fs-6 mb-3">
+        <li class="nav-item fs-6 mb-3 link-hover">
           <a href="/events" class="text-decoration-none text-black">
             <img src="static/assets/icons/resume/nav/Events.svg" alt="Events" />
             <span>Events</span>
           </a>
         </li>
 
-        <li class="nav-item fs-6 mb-3">
+        <li class="nav-item fs-6 mb-3 link-hover">
           <a href="/settings" class="text-decoration-none text-black">
             <img src="static/assets/icons/resume/nav/SettingsNavigation.svg" alt="Settings" />
             <span>Account settings</span>

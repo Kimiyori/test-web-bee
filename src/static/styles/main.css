@@ -34,3 +34,6 @@ article > div > h6 {
     height: 200px;
   }
 }
+.link-hover:hover {
+  background-color: rgba(233,236,239,0.5);
+}

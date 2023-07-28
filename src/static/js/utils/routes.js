@@ -3,7 +3,7 @@ import Map from '../views/Map.js';
 import Timer from '../views/Timer.js';
 import { myTimer } from '../timer/timer.js';
 import { toggleDropdownMenu } from '../utils/dropdownMenu.js';
-import { handleSideBarButton, handleHoverButtons } from '../utils/buttons.js';
+import { handleSideBarButton } from '../utils/buttons.js';
 
 const ROUTES = {
   '/': {
@@ -46,7 +46,6 @@ export const updateTitle = (title) => (document.title = title);
 export const handleLoadActions = () => {
   window.location.pathname.endsWith('time') && myTimer();
   handleSideBarButton();
-  handleHoverButtons();
   toggleDropdownMenu();
 };
 
